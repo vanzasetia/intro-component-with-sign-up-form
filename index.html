@@ -160,16 +160,19 @@
               <input type="text" name="bot-field"
             /></label>
           </p>
-          <label class="hero__form-control">
+          <div class="hero__form-control">
             <input
               type="text"
               name="first-name"
               placeholder=" "
+              id="heroFirstNameInput"
               class="hero__input js-input"
               aria-describedby="heroFirstNameAlert"
               data-id="firstName"
             />
-            <span class="hero__label">First Name</span>
+            <label for="heroFirstNameInput" class="hero__label"
+              >First Name</label
+            >
             <p
               id="heroFirstNameAlert"
               class="hero__alert js-alert"
@@ -179,17 +182,20 @@
               First name must only contain alphabets and at least one
               vowel letter.
             </p>
-          </label>
-          <label class="hero__form-control">
+          </div>
+          <div class="hero__form-control">
             <input
               type="text"
               name="last-name"
               placeholder=" "
+              id="heroLastNameInput"
               class="hero__input js-input"
               aria-describedby="heroLastNameAlert"
               data-id="lastName"
             />
-            <span class="hero__label">Last Name</span>
+            <label for="heroLastNameInput" class="hero__label"
+              >Last Name</label
+            >
             <p
               id="heroLastNameAlert"
               class="hero__alert js-alert"
@@ -199,17 +205,20 @@
               Last name must only contain alphabets and at least one
               vowel letter.
             </p>
-          </label>
-          <label class="hero__form-control">
+          </div>
+          <div class="hero__form-control">
             <input
               type="email"
               name="email"
               placeholder=" "
+              id="heroEmailInput"
               class="hero__input js-input"
               aria-describedby="heroEmailAlert"
               data-id="email"
             />
-            <span class="hero__label">Email Address</span>
+            <label for="heroEmailInput" class="hero__label"
+              >Email Address</label
+            >
             <p
               id="heroEmailAlert"
               class="hero__alert js-alert"
@@ -218,17 +227,20 @@
             >
               Looks like this is not an email
             </p>
-          </label>
-          <label class="hero__form-control">
+          </div>
+          <div class="hero__form-control">
             <input
               type="password"
               name="password"
               placeholder=" "
+              id="heroPasswordInput"
               class="hero__input js-input"
               aria-describedby="heroPasswordAlert"
               data-id="password"
             />
-            <span class="hero__label">Password</span>
+            <label for="heroPasswordInput" class="hero__label"
+              >Password</label
+            >
             <p
               id="heroPasswordAlert"
               class="hero__alert js-alert"
@@ -238,7 +250,7 @@
               Use 8 or more characters with a mix of lowercase and
               uppercase letters, numbers & symbols
             </p>
-          </label>
+          </div>
           <button type="submit" class="hero__submit-button">
             Claim your free trial
           </button>
