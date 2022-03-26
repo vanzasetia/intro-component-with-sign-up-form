@@ -1,3 +1,5 @@
+@use "../abstracts" as *;
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -54,9 +56,21 @@ html {
   white-space: nowrap !important;
 }
 
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $red url("../images/bg-intro-mobile.png") no-repeat
+    center center/100%;
+  padding: rem(88) rem(24);
+}
+
 main,
 footer {
-  font: 1.6 "Poppins", sans-serif;
+  line-height: 1.6;
+  color: $white;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
 }
 
 p {
@@ -131,40 +145,6 @@ textarea {
  */
 svg path {
   fill: currentColor;
-}
-
-/** 
- * Set "display: none" on Line Breaks 
- * Used as Spacing 
- */
-br + br {
-  display: none;
-}
-
-.skip-content {
-  display: inline-block;
-  position: fixed;
-  top: 3rem;
-  left: 0;
-  z-index: 200;
-  background-color: rgb(250, 250, 250);
-  padding: 1em 2em;
-  text-decoration: 0.1em solid;
-  font-size: 1.25rem;
-  transform: translateX(-200%);
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .skip-content {
-    transition: transform 0.3s ease 0s;
-  }
-}
-
-.skip-content:focus,
-.skip-content:focus-visible {
-  outline: 0.2em dashed rgb(18, 221, 201);
-  outline-offset: 0.25em;
-  transform: translate(0);
 }
 
 .hidden {

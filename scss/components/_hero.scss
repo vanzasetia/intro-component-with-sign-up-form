@@ -1,0 +1,139 @@
+@use "../abstracts" as *;
+$-input-border-radius: rem(5);
+
+.hero {
+  max-width: rem(600);
+}
+
+.hero__text {
+  margin-bottom: rem(64);
+  text-align: center;
+}
+
+.hero__title {
+  margin-bottom: rem(16);
+  line-height: 1.3;
+  font-size: rem(28);
+}
+
+.hero__promotion {
+  margin-bottom: rem(24);
+  border-radius: rem(10);
+  box-shadow: 0 rem(8) 0 rgba(0, 0, 0, 0.14);
+  background-color: $blue;
+  padding: rem(18) rem(66);
+  text-align: center;
+}
+
+.hero__promotion--regular {
+  font-weight: 400;
+}
+
+.hero__form {
+  border-radius: rem(10);
+  box-shadow: 0 rem(8) 0 rgba(0, 0, 0, 0.14);
+  background-color: $white;
+  padding: rem(24);
+}
+
+.hero__form-control {
+  display: block;
+  position: relative;
+  margin-bottom: rem(16);
+}
+
+.hero__input {
+  display: block;
+  border: rem(1) solid rgb(222, 222, 222);
+  border-radius: $-input-border-radius;
+  padding: rem(15) rem(55) rem(15) rem(20);
+  width: 100%;
+  height: rem(56);
+  letter-spacing: rem(0.25);
+  color: $dark-blue;
+  font-size: rem(14);
+  font-weight: 600;
+  @include focus-visible($dark-blue);
+}
+
+.hero__input:not(:placeholder-shown) ~ .hero__label {
+  opacity: 0;
+}
+
+.hero__input.is-invalid {
+  border: rem(2) solid $red;
+  background: url("../svg/icon-error.svg") no-repeat center right
+    rem(27);
+  color: $red;
+  @include focus-visible($red);
+}
+
+.hero__input.is-invalid ~ .hero__label {
+  color: $red;
+}
+
+.hero__label {
+  position: absolute;
+  top: rem(15);
+  left: rem(21);
+  opacity: 0.75;
+  letter-spacing: rem(0.25);
+  color: $dark-blue;
+  color: $dark-blue;
+  font-size: rem(14);
+  font-weight: 600;
+}
+
+.hero__alert {
+  margin-top: rem(6);
+  text-align: right;
+  color: $red;
+  font-size: rem(11);
+  font-style: italic;
+}
+
+.hero__submit-button {
+  display: block;
+  border: none;
+  border-radius: $-input-border-radius;
+  box-shadow: inset 0 rem(-4) 0 rgba(0, 0, 0, 0.09);
+  background-color: $green;
+  cursor: pointer;
+  padding: rem(15) rem(44);
+  width: 100%;
+  text-transform: uppercase;
+  color: $white;
+  font-weight: 600;
+  @include focus-visible($dark-blue);
+
+  @include on-event {
+    background-color: rgb(119, 226, 179);
+  }
+
+  @media screen and (prefers-reduced-motion: no-preference) {
+    transition: background-color 150ms ease-in-out;
+  }
+}
+
+.hero__message {
+  margin-top: rem(8);
+  text-align: center;
+  line-height: 1.9;
+  color: $grayish-blue;
+  font-size: rem(11);
+}
+
+.hero__link {
+  text-decoration: none;
+  color: $red;
+  font-weight: 700;
+  @include focus-visible($dark-blue);
+
+  @include on-event {
+    color: lighten-color($red, 30%);
+  }
+
+  @media screen and (prefers-reduced-motion: no-preference) {
+    transition: color 150ms ease-in-out;
+  }
+}

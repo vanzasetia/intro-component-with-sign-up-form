@@ -155,9 +155,20 @@ html {
   white-space: nowrap !important;
 }
 
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ff7a7a url("../images/bg-intro-mobile.png") no-repeat center center/100%;
+  padding: 5.5rem 1.5rem;
+}
+
 main,
 footer {
-  font: 1.6 "Poppins", sans-serif;
+  line-height: 1.6;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
 }
 
 p {
@@ -234,39 +245,6 @@ svg path {
   fill: currentColor;
 }
 
-/** 
- * Set "display: none" on Line Breaks 
- * Used as Spacing 
- */
-br + br {
-  display: none;
-}
-
-.skip-content {
-  display: inline-block;
-  position: fixed;
-  top: 3rem;
-  left: 0;
-  z-index: 200;
-  background-color: #fafafa;
-  padding: 1em 2em;
-  text-decoration: 0.1em solid;
-  font-size: 1.25rem;
-  transform: translateX(-200%);
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .skip-content {
-    transition: transform 0.3s ease 0s;
-  }
-}
-.skip-content:focus,
-.skip-content:focus-visible {
-  outline: 0.2em dashed #12ddc9;
-  outline-offset: 0.25em;
-  transform: translate(0);
-}
-
 .hidden {
   visibility: hidden;
   width: 0.0625rem;
@@ -321,5 +299,152 @@ br + br {
   .noscript__text {
     opacity: 0;
     animation: fade-in 500ms ease-in-out 1000ms forwards;
+  }
+}
+.hero {
+  max-width: 37.5rem;
+}
+
+.hero__text {
+  margin-bottom: 4rem;
+  text-align: center;
+}
+
+.hero__title {
+  margin-bottom: 1rem;
+  line-height: 1.3;
+  font-size: 1.75rem;
+}
+
+.hero__promotion {
+  margin-bottom: 1.5rem;
+  border-radius: 0.625rem;
+  box-shadow: 0 0.5rem 0 rgba(0, 0, 0, 0.14);
+  background-color: #6055a5;
+  padding: 1.125rem 4.125rem;
+  text-align: center;
+}
+
+.hero__promotion--regular {
+  font-weight: 400;
+}
+
+.hero__form {
+  border-radius: 0.625rem;
+  box-shadow: 0 0.5rem 0 rgba(0, 0, 0, 0.14);
+  background-color: white;
+  padding: 1.5rem;
+}
+
+.hero__form-control {
+  display: block;
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.hero__input {
+  display: block;
+  border: 0.0625rem solid #dedede;
+  border-radius: 0.3125rem;
+  padding: 0.9375rem 3.4375rem 0.9375rem 1.25rem;
+  width: 100%;
+  height: 3.5rem;
+  letter-spacing: 0.015625rem;
+  color: #3e3c49;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+.hero__input:focus-visible, .hero__input:focus {
+  outline: 0.1875rem dotted #3e3c49;
+  outline-offset: 0.3125rem;
+}
+
+.hero__input:not(:placeholder-shown) ~ .hero__label {
+  opacity: 0;
+}
+
+.hero__input.is-invalid {
+  border: 0.125rem solid #ff7a7a;
+  background: url("../svg/icon-error.svg") no-repeat center right 1.6875rem;
+  color: #ff7a7a;
+}
+.hero__input.is-invalid:focus-visible, .hero__input.is-invalid:focus {
+  outline: 0.1875rem dotted #ff7a7a;
+  outline-offset: 0.3125rem;
+}
+
+.hero__input.is-invalid ~ .hero__label {
+  color: #ff7a7a;
+}
+
+.hero__label {
+  position: absolute;
+  top: 0.9375rem;
+  left: 1.3125rem;
+  opacity: 0.75;
+  letter-spacing: 0.015625rem;
+  color: #3e3c49;
+  color: #3e3c49;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.hero__alert {
+  margin-top: 0.375rem;
+  text-align: right;
+  color: #ff7a7a;
+  font-size: 0.6875rem;
+  font-style: italic;
+}
+
+.hero__submit-button {
+  display: block;
+  border: none;
+  border-radius: 0.3125rem;
+  box-shadow: inset 0 -0.25rem 0 rgba(0, 0, 0, 0.09);
+  background-color: #38cc8c;
+  cursor: pointer;
+  padding: 0.9375rem 2.75rem;
+  width: 100%;
+  text-transform: uppercase;
+  color: white;
+  font-weight: 600;
+}
+.hero__submit-button:focus-visible, .hero__submit-button:focus {
+  outline: 0.1875rem dotted #3e3c49;
+  outline-offset: 0.3125rem;
+}
+.hero__submit-button:hover, .hero__submit-button:active {
+  background-color: #77e2b3;
+}
+@media screen and (prefers-reduced-motion: no-preference) {
+  .hero__submit-button {
+    transition: background-color 150ms ease-in-out;
+  }
+}
+
+.hero__message {
+  margin-top: 0.5rem;
+  text-align: center;
+  line-height: 1.9;
+  color: #b9b6d3;
+  font-size: 0.6875rem;
+}
+
+.hero__link {
+  text-decoration: none;
+  color: #ff7a7a;
+  font-weight: 700;
+}
+.hero__link:focus-visible, .hero__link:focus {
+  outline: 0.1875rem dotted #3e3c49;
+  outline-offset: 0.3125rem;
+}
+.hero__link:hover, .hero__link:active {
+  color: #ffa2a2;
+}
+@media screen and (prefers-reduced-motion: no-preference) {
+  .hero__link {
+    transition: color 150ms ease-in-out;
   }
 }
