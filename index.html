@@ -17,7 +17,7 @@
     -->
     <!-- prettier-ignore -->
     <style>@font-face{font-family:"Poppins";font-style:normal;font-weight:700;font-display:swap;src:local("Poppins"), local("Poppins Bold"), local("Poppins-Bold"), url("/fonts/PoppinsBold.woff2") format("woff2"), url("/fonts/PoppinsBold.woff") format("woff")}@font-face{font-family:"Poppins";font-style:normal;font-weight:600;font-display:swap;src:local("Poppins"), local("Poppins SemiBold"), local("Poppins-SemiBold"), url("/fonts/PoppinsSemiBold.woff2") format("woff2"), url("/fonts/PoppinsSemiBold.woff") format("woff")}@font-face{font-family:"Poppins";font-style:normal;font-weight:500;font-display:swap;src:local("Poppins"), local("Poppins Medium"), local("Poppins-Medium"), url("/fonts/PoppinsMedium.woff2") format("woff2"), url("/fonts/PoppinsMedium.woff") format("woff")}@font-face{font-family:"Poppins";font-style:normal;font-weight:400;font-display:swap;src:local("Poppins"), local("Poppins Regular"), local("Poppins-Regular"), url("/fonts/PoppinsRegular.woff2") format("woff2"), url("/fonts/PoppinsRegular.woff") format("woff")}</style>
-    <link rel="stylesheet" href="/" />
+    <link rel="stylesheet" href="/css/style.css" />
     <!-- Preload Font Family To Prevent Shifting Layout -->
     <link
       rel="preload"
@@ -47,7 +47,7 @@
       type="font/woff2"
       crossorigin
     />
-    <script src="/" defer></script>
+    <script src="/js/app.js" defer></script>
     <!-- Favicons -->
     <link rel="icon" href="/images/frontendmentor.png" />
     <link
@@ -130,7 +130,122 @@
         </p>
       </div>
     </noscript>
-    <main></main>
+    <main class="hero">
+      <div class="hero__text">
+        <h1 class="hero__title">Learn to code by watching others</h1>
+        <p class="hero__description">
+          See how experienced developers solve problems in real-time.
+          Watching scripted tutorials is great, but understanding how
+          developers think is invaluable.
+        </p>
+      </div>
+      <div class="hero__sign-up">
+        <p class="hero__promotion">
+          Try it free 7 days
+          <span class="hero__promotion--regular"
+            >then 120/mo. thereafter</span
+          >
+        </p>
+        <form
+          class="hero__form js-form"
+          name="sign-up"
+          novalidate
+          method="POST"
+          netlify-honeypot="bot-field"
+          data-netlify="true"
+        >
+          <p class="hidden" aria-hidden="true">
+            <label
+              >Don’t fill this out if you’re human:
+              <input type="text" name="bot-field"
+            /></label>
+          </p>
+          <label class="hero__form-control">
+            <input
+              type="text"
+              name="first-name"
+              placeholder=" "
+              class="hero__input js-input"
+              aria-describedby="heroFirstNameAlert"
+              data-id="firstName"
+            />
+            <span class="hero__label">First Name</span>
+            <p
+              id="heroFirstNameAlert"
+              class="hero__alert js-alert"
+              hidden
+              data-id="firstName"
+            >
+              First Name cannot be empty
+            </p>
+          </label>
+          <label class="hero__form-control">
+            <input
+              type="text"
+              name="last-name"
+              placeholder=" "
+              class="hero__input js-input"
+              aria-describedby="heroLastNameAlert"
+              data-id="lastName"
+            />
+            <span class="hero__label">Last Name</span>
+            <p
+              id="heroLastNameAlert"
+              class="hero__alert js-alert"
+              hidden
+              data-id="lastName"
+            >
+              Last Name cannot be empty
+            </p>
+          </label>
+          <label class="hero__form-control">
+            <input
+              type="email"
+              name="email"
+              placeholder=" "
+              class="hero__input js-input"
+              aria-describedby="heroEmailAlert"
+              data-id="email"
+            />
+            <span class="hero__label">Email Address</span>
+            <p
+              id="heroEmailAlert"
+              class="hero__alert js-alert"
+              hidden
+              data-id="email"
+            >
+              Looks like this is not an email
+            </p>
+          </label>
+          <label class="hero__form-control">
+            <input
+              type="password"
+              name="password"
+              placeholder=" "
+              class="hero__input js-input"
+              aria-describedby="heroPasswordAlert"
+              data-id="password"
+            />
+            <span class="hero__label">Password</span>
+            <p
+              id="heroPasswordAlert"
+              class="hero__alert js-alert"
+              hidden
+              data-id="password"
+            >
+              Password cannot be empty
+            </p>
+          </label>
+          <button type="submit" class="hero__submit-button">
+            Claim your free trial
+          </button>
+          <p class="hero__message">
+            By clicking the button, you are agreeing to our
+            <a href="/" class="hero__link">Terms and Services</a>
+          </p>
+        </form>
+      </div>
+    </main>
     <script>
       if ("serviceWorker" in navigator) {
         window.addEventListener("load", () => {
