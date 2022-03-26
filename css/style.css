@@ -367,6 +367,7 @@ svg path {
   background-color: #6055a5;
   padding: 1.125rem 4.125rem;
   text-align: center;
+  font-weight: 600;
 }
 
 .hero__promotion--regular {
