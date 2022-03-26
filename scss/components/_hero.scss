@@ -39,6 +39,7 @@ $-hero-gap: rem(45);
 
   @include breakpoint-up("tiny") {
     margin-bottom: rem(24);
+    line-height: 1.1;
     letter-spacing: rem(-0.5);
     font-size: rem(50);
   }
@@ -150,6 +151,7 @@ $-hero-gap: rem(45);
   @include on-event {
     background-color: rgb(119, 226, 179);
   }
+
   @media screen and (prefers-reduced-motion: no-preference) {
     transition: background-color 150ms ease-in-out;
   }
@@ -173,6 +175,7 @@ $-hero-gap: rem(45);
   @include on-event {
     color: lighten-color($red, 30%);
   }
+
   @media screen and (prefers-reduced-motion: no-preference) {
     transition: color 150ms ease-in-out;
   }

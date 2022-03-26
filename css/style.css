@@ -348,6 +348,7 @@ svg path {
 @media screen and (min-width: 59.375em) {
   .hero__title {
     margin-bottom: 1.5rem;
+    line-height: 1.1;
     letter-spacing: -0.03125rem;
     font-size: 3.125rem;
   }
