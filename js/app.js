@@ -1,6 +1,9 @@
 (function () {
   "use strict";
   const form = document.querySelector(".js-form");
+  const showPasswordButton = document.querySelector(
+    ".js-showPasswordButton"
+  );
 
   const showAlertMessage = (alert, input) => {
     alert.removeAttribute("hidden");
@@ -104,5 +107,18 @@
     }
   };
 
+  const togglePasswordVisibility = () => {
+    const passwordInput = document.querySelector(".js-passwordInput");
+    if (passwordInput.type === "password") {
+      passwordInput.type = "text";
+    } else {
+      passwordInput.type = "password";
+    }
+  };
+
   form.addEventListener("submit", validateUserInputs);
+  showPasswordButton.addEventListener(
+    "click",
+    togglePasswordVisibility
+  );
 })();

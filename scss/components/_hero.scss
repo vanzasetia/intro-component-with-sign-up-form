@@ -82,6 +82,10 @@ $-hero-gap: rem(45);
   margin-bottom: rem(16);
 }
 
+.hero__form-control--show-password {
+  display: inline-block;
+}
+
 .hero__input {
   display: block;
   border: rem(1) solid rgb(222, 222, 222);
@@ -126,12 +130,26 @@ $-hero-gap: rem(45);
   font-weight: 600;
 }
 
+.hero__label--show-password {
+  position: static;
+  opacity: 1;
+  cursor: pointer;
+}
+
 .hero__alert {
   margin-top: rem(6);
   text-align: right;
   color: $red;
   font-size: rem(11);
   font-style: italic;
+}
+
+.hero__checkbox {
+  position: relative;
+  top: rem(4);
+  width: rem(18);
+  height: rem(18);
+  cursor: pointer;
 }
 
 .hero__submit-button {

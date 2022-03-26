@@ -234,7 +234,7 @@
               name="password"
               placeholder=" "
               id="heroPasswordInput"
-              class="hero__input js-input"
+              class="hero__input js-input js-passwordInput"
               aria-describedby="heroPasswordAlert"
               data-id="password"
             />
@@ -251,6 +251,18 @@
               uppercase letters, numbers & symbols
             </p>
           </div>
+          <label
+            class="hero__form-control hero__form-control--show-password"
+          >
+            <input
+              type="checkbox"
+              name="show-password"
+              class="hero__checkbox js-showPasswordButton"
+            />
+            <span class="hero__label hero__label--show-password"
+              >Show password</span
+            >
+          </label>
           <button type="submit" class="hero__submit-button">
             Claim your free trial
           </button>
