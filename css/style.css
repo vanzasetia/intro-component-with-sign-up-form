@@ -162,6 +162,11 @@ body {
   background: #ff7a7a url("../images/bg-intro-mobile.png") no-repeat center center/100%;
   padding: 5.5rem 1.5rem;
 }
+@media screen and (min-width: 59.375em) {
+  body {
+    background-image: url("../images/bg-intro-desktop.png");
+  }
+}
 
 main,
 footer {
@@ -304,16 +309,54 @@ svg path {
 .hero {
   max-width: 37.5rem;
 }
+@media screen and (min-width: 59.375em) {
+  .hero {
+    display: flex;
+    align-items: center;
+    max-width: 69.375rem;
+  }
+  @supports (gap: 2.8125rem) {
+    .hero {
+      gap: 2.8125rem;
+    }
+  }
+}
 
 .hero__text {
   margin-bottom: 4rem;
   text-align: center;
+}
+@media screen and (min-width: 59.375em) {
+  .hero__text {
+    flex-basis: 100%;
+    margin-right: 2.8125rem;
+    margin-bottom: 0;
+    text-align: left;
+  }
+  @supports (gap: 2.8125rem) {
+    .hero__text {
+      margin-right: 0;
+    }
+  }
 }
 
 .hero__title {
   margin-bottom: 1rem;
   line-height: 1.3;
   font-size: 1.75rem;
+}
+@media screen and (min-width: 59.375em) {
+  .hero__title {
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.03125rem;
+    font-size: 3.125rem;
+  }
+}
+
+@media screen and (min-width: 59.375em) {
+  .hero__sign-up {
+    flex-basis: 100%;
+  }
 }
 
 .hero__promotion {
@@ -334,6 +377,11 @@ svg path {
   box-shadow: 0 0.5rem 0 rgba(0, 0, 0, 0.14);
   background-color: white;
   padding: 1.5rem;
+}
+@media screen and (min-width: 59.375em) {
+  .hero__form {
+    padding: 2.5rem;
+  }
 }
 
 .hero__form-control {

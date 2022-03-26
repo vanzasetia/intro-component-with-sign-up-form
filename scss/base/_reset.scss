@@ -63,6 +63,10 @@ body {
   background: $red url("../images/bg-intro-mobile.png") no-repeat
     center center/100%;
   padding: rem(88) rem(24);
+
+  @include breakpoint-up("tiny") {
+    background-image: url("../images/bg-intro-desktop.png");
+  }
 }
 
 main,
