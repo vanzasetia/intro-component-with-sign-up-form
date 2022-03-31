@@ -83,7 +83,9 @@ $-hero-gap: rem(45);
 }
 
 .hero__form-control--show-password {
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .hero__input {
@@ -125,7 +127,6 @@ $-hero-gap: rem(45);
   opacity: 0.75;
   letter-spacing: rem(0.25);
   color: $dark-blue;
-  color: $dark-blue;
   font-size: rem(14);
   font-weight: 600;
 }
@@ -133,7 +134,7 @@ $-hero-gap: rem(45);
 .hero__label--show-password {
   position: static;
   opacity: 1;
-  cursor: pointer;
+  font-size: rem(12);
 }
 
 .hero__alert {
@@ -147,9 +148,17 @@ $-hero-gap: rem(45);
 .hero__checkbox {
   position: relative;
   top: rem(4);
-  width: rem(18);
-  height: rem(18);
   cursor: pointer;
+  width: rem(16);
+  height: rem(16);
+
+  @include focus-visible($dark-blue);
+}
+
+.hero__password-length {
+  color: $dark-blue;
+  font-size: rem(12);
+  font-weight: 600;
 }
 
 .hero__submit-button {

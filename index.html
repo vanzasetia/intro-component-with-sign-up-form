@@ -251,18 +251,24 @@
               and uppercase letters, numbers & symbols (!@#$%^&*)
             </p>
           </div>
-          <label
+          <div
             class="hero__form-control hero__form-control--show-password"
           >
-            <input
-              type="checkbox"
-              name="show-password"
-              class="hero__checkbox js-showPasswordButton"
-            />
-            <span class="hero__label hero__label--show-password"
-              >Show password</span
-            >
-          </label>
+            <label>
+              <input
+                type="checkbox"
+                name="show-password"
+                class="hero__checkbox js-showPasswordButton"
+              />
+              <span class="hero__label hero__label--show-password"
+                >Show password</span
+              >
+            </label>
+            <p class="hero__password-length">
+              Password length:
+              <span class="js-passwordLength">0</span>
+            </p>
+          </div>
           <button type="submit" class="hero__submit-button">
             Claim your free trial
           </button>

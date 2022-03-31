@@ -1,6 +1,7 @@
 (function () {
   "use strict";
   const form = document.querySelector(".js-form");
+  const passwordInput = document.querySelector(".js-passwordInput");
   const showPasswordButton = document.querySelector(
     ".js-showPasswordButton"
   );
@@ -108,7 +109,6 @@
   };
 
   const togglePasswordVisibility = () => {
-    const passwordInput = document.querySelector(".js-passwordInput");
     if (passwordInput.type === "password") {
       passwordInput.type = "text";
     } else {
@@ -116,9 +116,17 @@
     }
   };
 
+  const countPasswordLength = () => {
+    const passwordLength = document.querySelector(
+      ".js-passwordLength"
+    );
+    passwordLength.textContent = passwordInput.value.length;
+  };
+
   form.addEventListener("submit", validateUserInputs);
   showPasswordButton.addEventListener(
     "click",
     togglePasswordVisibility
   );
+  passwordInput.addEventListener("input", countPasswordLength);
 })();

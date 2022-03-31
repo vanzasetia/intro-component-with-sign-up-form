@@ -393,7 +393,9 @@ svg path {
 }
 
 .hero__form-control--show-password {
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .hero__input {
@@ -438,7 +440,6 @@ svg path {
   opacity: 0.75;
   letter-spacing: 0.015625rem;
   color: #3e3c49;
-  color: #3e3c49;
   font-size: 0.875rem;
   font-weight: 600;
 }
@@ -446,7 +447,7 @@ svg path {
 .hero__label--show-password {
   position: static;
   opacity: 1;
-  cursor: pointer;
+  font-size: 0.75rem;
 }
 
 .hero__alert {
@@ -460,9 +461,19 @@ svg path {
 .hero__checkbox {
   position: relative;
   top: 0.25rem;
-  width: 1.125rem;
-  height: 1.125rem;
   cursor: pointer;
+  width: 1rem;
+  height: 1rem;
+}
+.hero__checkbox:focus-visible, .hero__checkbox:focus {
+  outline: 0.1875rem dotted #3e3c49;
+  outline-offset: 0.3125rem;
+}
+
+.hero__password-length {
+  color: #3e3c49;
+  font-size: 0.75rem;
+  font-weight: 600;
 }
 
 .hero__submit-button {
