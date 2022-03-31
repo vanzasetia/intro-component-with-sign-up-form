@@ -379,6 +379,9 @@ svg path {
   box-shadow: 0 0.5rem 0 rgba(0, 0, 0, 0.14);
   background-color: white;
   padding: 1.5rem;
+  color: #3e3c49;
+  font-size: 0.875rem;
+  font-weight: 600;
 }
 @media screen and (min-width: 59.375em) {
   .hero__form {
@@ -406,9 +409,6 @@ svg path {
   width: 100%;
   height: 3.5rem;
   letter-spacing: 0.015625rem;
-  color: #3e3c49;
-  font-size: 0.875rem;
-  font-weight: 600;
 }
 .hero__input:focus-visible, .hero__input:focus {
   outline: 0.1875rem dotted #3e3c49;
@@ -439,9 +439,6 @@ svg path {
   left: 1.3125rem;
   opacity: 0.75;
   letter-spacing: 0.015625rem;
-  color: #3e3c49;
-  font-size: 0.875rem;
-  font-weight: 600;
 }
 
 .hero__label--show-password {
@@ -455,6 +452,7 @@ svg path {
   text-align: right;
   color: #ff7a7a;
   font-size: 0.6875rem;
+  font-weight: 500;
   font-style: italic;
 }
 
@@ -471,9 +469,7 @@ svg path {
 }
 
 .hero__password-length {
-  color: #3e3c49;
   font-size: 0.75rem;
-  font-weight: 600;
 }
 
 .hero__submit-button {
@@ -487,7 +483,7 @@ svg path {
   width: 100%;
   text-transform: uppercase;
   color: white;
-  font-weight: 600;
+  font-size: 0.9375rem;
 }
 .hero__submit-button:focus-visible, .hero__submit-button:focus {
   outline: 0.1875rem dotted #3e3c49;

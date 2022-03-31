@@ -70,7 +70,9 @@ $-hero-gap: rem(45);
   box-shadow: 0 rem(8) 0 rgba(0, 0, 0, 0.14);
   background-color: $white;
   padding: rem(24);
-
+  color: $dark-blue;
+  font-size: rem(14);
+  font-weight: 600;
   @include breakpoint-up("tiny") {
     padding: rem(40);
   }
@@ -96,9 +98,6 @@ $-hero-gap: rem(45);
   width: 100%;
   height: rem(56);
   letter-spacing: rem(0.25);
-  color: $dark-blue;
-  font-size: rem(14);
-  font-weight: 600;
 
   @include focus-visible($dark-blue);
 }
@@ -126,9 +125,6 @@ $-hero-gap: rem(45);
   left: rem(21);
   opacity: 0.75;
   letter-spacing: rem(0.25);
-  color: $dark-blue;
-  font-size: rem(14);
-  font-weight: 600;
 }
 
 .hero__label--show-password {
@@ -142,6 +138,7 @@ $-hero-gap: rem(45);
   text-align: right;
   color: $red;
   font-size: rem(11);
+  font-weight: 500;
   font-style: italic;
 }
 
@@ -156,9 +153,7 @@ $-hero-gap: rem(45);
 }
 
 .hero__password-length {
-  color: $dark-blue;
   font-size: rem(12);
-  font-weight: 600;
 }
 
 .hero__submit-button {
@@ -172,7 +167,7 @@ $-hero-gap: rem(45);
   width: 100%;
   text-transform: uppercase;
   color: $white;
-  font-weight: 600;
+  font-size: rem(15);
 
   @include focus-visible($dark-blue);
 
