@@ -1,0 +1,29 @@
+@use "../abstracts" as *;
+
+.footer {
+  margin-top: rem(100);
+  width: 100%;
+  text-align: center;
+  font-size: rem(14);
+  font-weight: 600;
+
+  @include breakpoint-up("tiny") {
+    width: auto;
+  }
+}
+
+.footer__link {
+  text-decoration: none;
+  color: $red;
+  font-weight: 700;
+
+  @include focus-visible($dark-blue);
+
+  @include on-event {
+    color: lighten-color($red, 30%);
+  }
+
+  @media screen and (prefers-reduced-motion: no-preference) {
+    transition: color 150ms ease-in-out;
+  }
+}

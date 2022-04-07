@@ -58,10 +58,11 @@ html {
 
 body {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   background: $red url("../images/bg-intro-mobile.png") no-repeat
-    center center/100%;
+    center center/cover;
   padding: rem(88) rem(24);
 
   @include breakpoint-up("tiny") {

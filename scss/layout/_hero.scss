@@ -54,8 +54,6 @@ $-hero-gap: rem(45);
 .hero__promotion {
   margin-bottom: rem(24);
   border-radius: rem(10);
-  box-shadow: 0 rem(8) 0 rgba(0, 0, 0, 0.14);
-  background-color: $blue;
   padding: rem(18) rem(66);
   text-align: center;
   font-weight: 700;
@@ -66,11 +64,6 @@ $-hero-gap: rem(45);
 }
 
 .hero__form {
-  border-radius: rem(10);
-  box-shadow: 0 rem(8) 0 rgba(0, 0, 0, 0.14);
-  background-color: $white;
-  padding: rem(24);
-  color: $dark-blue;
   font-size: rem(14);
   font-weight: 600;
 

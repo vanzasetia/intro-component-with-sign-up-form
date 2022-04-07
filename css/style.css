@@ -3,8 +3,8 @@
 \*------------------------------------*/
 /*  Modern CSS reset - https://piccalil.li/blog/a-modern-css-reset/ */
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role="list"],
-ol[role="list"] {
+ul[role=list],
+ol[role=list] {
   list-style: none;
 }
 
@@ -88,8 +88,8 @@ video {
  * Remove default fieldset styles.
  */
 fieldset {
-  margin: 0;
   border: 0;
+  margin: 0;
   padding: 0;
 }
 
@@ -102,8 +102,8 @@ textarea {
 
 @media (prefers-reduced-motion: reduce) {
   *,
-  *::before,
-  *::after {
+*::before,
+*::after {
     background-attachment: initial !important;
     transition-delay: 0s !important;
     transition-duration: 0s !important;
@@ -157,10 +157,10 @@ html {
 
 body {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: #ff7a7a url("../images/bg-intro-mobile.png") no-repeat
-    center center/100%;
+  background: #ff7a7a url("../images/bg-intro-mobile.png") no-repeat center center/cover;
   padding: 5.5rem 1.5rem;
 }
 @media screen and (min-width: 59.375em) {
@@ -236,8 +236,8 @@ video[autoplay]:not([muted]) {
  *
  * Source: https://github.com/AllThingsSmitty/css-protips#set-font-size-on-form-elements-for-a-better-mobile-experience
  */
-input[type="text"],
-input[type="number"],
+input[type=text],
+input[type=number],
 select,
 textarea {
   font-size: 1rem;
@@ -283,8 +283,7 @@ svg path {
   align-items: center;
   justify-content: center;
   z-index: 99;
-  background: #3a2046 url("../svg/exclamation-triangle.svg") no-repeat
-    center center/20rem;
+  background: #3a2046 url("../svg/exclamation-triangle.svg") no-repeat center center/20rem;
   padding: 0.625rem;
   width: 100%;
   min-height: 100vh;
@@ -308,6 +307,22 @@ svg path {
     animation: fade-in 500ms ease-in-out 1000ms forwards;
   }
 }
+.card {
+  border-radius: 0.625rem;
+  box-shadow: 0 0.5rem 0 rgba(0, 0, 0, 0.14);
+  padding: 1.5rem;
+}
+
+.card--white {
+  background-color: white;
+  color: #3e3c49;
+}
+
+.card--blue {
+  background-color: #6055a5;
+  color: white;
+}
+
 .hero {
   max-width: 37.5rem;
 }
@@ -365,8 +380,6 @@ svg path {
 .hero__promotion {
   margin-bottom: 1.5rem;
   border-radius: 0.625rem;
-  box-shadow: 0 0.5rem 0 rgba(0, 0, 0, 0.14);
-  background-color: #6055a5;
   padding: 1.125rem 4.125rem;
   text-align: center;
   font-weight: 700;
@@ -377,11 +390,6 @@ svg path {
 }
 
 .hero__form {
-  border-radius: 0.625rem;
-  box-shadow: 0 0.5rem 0 rgba(0, 0, 0, 0.14);
-  background-color: white;
-  padding: 1.5rem;
-  color: #3e3c49;
   font-size: 0.875rem;
   font-weight: 600;
 }
@@ -412,8 +420,7 @@ svg path {
   height: 3.5rem;
   letter-spacing: 0.015625rem;
 }
-.hero__input:focus-visible,
-.hero__input:focus {
+.hero__input:focus-visible, .hero__input:focus {
   outline: 0.1875rem dotted #3e3c49;
   outline-offset: 0.3125rem;
 }
@@ -424,12 +431,10 @@ svg path {
 
 .hero__input.is-invalid {
   border: 0.125rem solid #ff7a7a;
-  background: url("../svg/icon-error.svg") no-repeat center right
-    1.6875rem;
+  background: url("../svg/icon-error.svg") no-repeat center right 1.6875rem;
   color: #ff7a7a;
 }
-.hero__input.is-invalid:focus-visible,
-.hero__input.is-invalid:focus {
+.hero__input.is-invalid:focus-visible, .hero__input.is-invalid:focus {
   outline: 0.1875rem dotted #ff7a7a;
   outline-offset: 0.3125rem;
 }
@@ -468,8 +473,7 @@ svg path {
   width: 1rem;
   height: 1rem;
 }
-.hero__checkbox:focus-visible,
-.hero__checkbox:focus {
+.hero__checkbox:focus-visible, .hero__checkbox:focus {
   outline: 0.1875rem dotted #3e3c49;
   outline-offset: 0.3125rem;
 }
@@ -491,13 +495,11 @@ svg path {
   color: white;
   font-size: 0.9375rem;
 }
-.hero__submit-button:focus-visible,
-.hero__submit-button:focus {
+.hero__submit-button:focus-visible, .hero__submit-button:focus {
   outline: 0.1875rem dotted #3e3c49;
   outline-offset: 0.3125rem;
 }
-.hero__submit-button:hover,
-.hero__submit-button:active {
+.hero__submit-button:hover, .hero__submit-button:active {
   background-color: #77e2b3;
 }
 @media screen and (prefers-reduced-motion: no-preference) {
@@ -519,17 +521,46 @@ svg path {
   color: #ff7a7a;
   font-weight: 700;
 }
-.hero__link:focus-visible,
-.hero__link:focus {
+.hero__link:focus-visible, .hero__link:focus {
   outline: 0.1875rem dotted #3e3c49;
   outline-offset: 0.3125rem;
 }
-.hero__link:hover,
-.hero__link:active {
+.hero__link:hover, .hero__link:active {
   color: #ffa2a2;
 }
 @media screen and (prefers-reduced-motion: no-preference) {
   .hero__link {
+    transition: color 150ms ease-in-out;
+  }
+}
+
+.footer {
+  margin-top: 6.25rem;
+  width: 100%;
+  text-align: center;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+@media screen and (min-width: 59.375em) {
+  .footer {
+    width: auto;
+  }
+}
+
+.footer__link {
+  text-decoration: none;
+  color: #ff7a7a;
+  font-weight: 700;
+}
+.footer__link:focus-visible, .footer__link:focus {
+  outline: 0.1875rem dotted #3e3c49;
+  outline-offset: 0.3125rem;
+}
+.footer__link:hover, .footer__link:active {
+  color: #ffa2a2;
+}
+@media screen and (prefers-reduced-motion: no-preference) {
+  .footer__link {
     transition: color 150ms ease-in-out;
   }
 }
