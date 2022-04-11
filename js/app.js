@@ -33,6 +33,15 @@
   };
 
   const validateName = (name, input) => {
+    /**
+     *
+     * Names must be
+     * - At least two characters long, max length anything
+     * - Include at least one vowel letter
+     *
+     * @author Vanza Setia <https://github.com/vanzasetia>
+     *
+     */
     const nameValidation =
       /^((?=.*[aiueo])|(?=.*[AIUEO]))[A-Za-z]{2,}$/;
     const isValid = nameValidation.test(name);
@@ -43,6 +52,29 @@
   };
 
   const validateEmail = (email, input) => {
+    /**
+     *
+     * Emails
+     * - Must have account name that must be
+     *   - At least two characters long, max length 30 characters
+     *   - It can contain numbers, letters, and period
+     * - Must have only one @ symbol
+     * - Must have first top level domain that must be
+     *   - At least two characters long, max length three characters
+     *   - It can contain numbers, letters, and period
+     * - May contain the second top level domain
+     *   - At least two characters long, max length three characters
+     *   - It can contain numbers, letters, and period
+     *
+     * @example
+     * // returns true
+     * const emailValidation =
+     * /^(?:[a-z0-9.]){2,30}@{1}(?:[a-z0-9-]){2,30}\.{1}(?:[a-z0-9]){2,3}(?:\.(?:[a-z0-9]){2,3})?$/
+     * emailValidation.test("hi@yo.me")
+     *
+     * @author Vanza Setia <https://github.com/vanzasetia>
+     *
+     */
     const emailValidation =
       /^(?:[a-z0-9.]){2,30}@{1}(?:[a-z0-9-]){2,30}\.{1}(?:[a-z0-9]){2,3}(?:\.(?:[a-z0-9]){2,3})?$/;
     const isValid = emailValidation.test(email);
@@ -53,6 +85,18 @@
   };
 
   const validatePassword = (password, input) => {
+    /**
+     *
+     * Passwords must be
+     * - At least 12 characters long, max length anything
+     * - Include at least 1 lowercase letter
+     * - 1 capital letter
+     * - 1 number
+     * - 1 special character => !@#$%^&*
+     *
+     * @author Harish Chaudhari <harishchaudhari.com>
+     *
+     */
     const passwordValidation =
       /^(?=.*[\d])(?=.*[A-Z])(?=.*[a-z])(?=.*[!@#$%^&*])[\w!@#$%^&*]{12,}$/;
     const isValid = passwordValidation.test(password);
