@@ -52,6 +52,12 @@ These are the guidelines that I follow when I write the code.
 - [Squoosh](https://squoosh.app/) - reduce the file size of the banner and the screenshot.
 
 ### Validations
+- [HTML Validator](https://validator.w3.org/nu/) - [the site has a valid HTML!](https://validator.w3.org/nu/?doc=https%3A%2F%2Fofficialmentor.netlify.app%2F)
+- [CSS Validator](https://jigsaw.w3.org/css-validator/) - [the site has a valid CSS!](http://jigsaw.w3.org/css-validator/validator?lang=en&profile=css3svg&uri=https%3A%2F%2Fofficialmentor.netlify.app%2F&usermedium=all&vextwarning=&warning=1)
+- [Checklist - The A11Y Project](https://www.a11yproject.com/checklist/) - I do manual accessibility test to the site.
+- [Meta Tags](https://metatags.io/) - see the social media card of the site.
+- [Grammarly](https://www.grammarly.com/) - validate the grammar of the documentation.
+- [PageSpeed Insights](https://pagespeed.web.dev/) - [the site has a good performance](https://pagespeed.web.dev/report?url=https%3A%2F%2Fofficialmentor.netlify.app%2F)
 
 ### Others
 - [github.com/vanzasetia/ping-single-column-coming-soon-page](https://github.com/vanzasetia/ping-single-column-coming-soon-page) - grab the favicon package from the repo.
