@@ -153,10 +153,15 @@
   };
 
   const togglePasswordVisibility = () => {
+    const eyeIcon = document.querySelector(".js-eyeIcon");
     if (passwordInput.type === "password") {
       passwordInput.type = "text";
+      eyeIcon.src = "/svg/eye-blocked.svg";
+      eyeIcon.alt = "Hide Password";
     } else {
       passwordInput.type = "password";
+      eyeIcon.src = "/svg/eye.svg";
+      eyeIcon.alt = "Show Password";
     }
   };
 

@@ -170,7 +170,9 @@
               aria-describedby="heroFirstNameAlert"
               data-id="firstName"
             />
-            <label for="heroFirstNameInput" class="hero__label"
+            <label
+              for="heroFirstNameInput"
+              class="hero__label hero__label--text"
               >First Name</label
             >
             <p
@@ -193,7 +195,9 @@
               aria-describedby="heroLastNameAlert"
               data-id="lastName"
             />
-            <label for="heroLastNameInput" class="hero__label"
+            <label
+              for="heroLastNameInput"
+              class="hero__label hero__label--text"
               >Last Name</label
             >
             <p
@@ -216,7 +220,9 @@
               aria-describedby="heroEmailAlert"
               data-id="email"
             />
-            <label for="heroEmailInput" class="hero__label"
+            <label
+              for="heroEmailInput"
+              class="hero__label hero__label--text"
               >Email Address</label
             >
             <p
@@ -234,11 +240,13 @@
               name="password"
               placeholder=" "
               id="heroPasswordInput"
-              class="hero__input js-input js-passwordInput"
+              class="hero__input hero__input--password js-input js-passwordInput"
               aria-describedby="heroPasswordAlert"
               data-id="password"
             />
-            <label for="heroPasswordInput" class="hero__label"
+            <label
+              for="heroPasswordInput"
+              class="hero__label hero__label--text"
               >Password</label
             >
             <p
@@ -250,20 +258,27 @@
               Use 12 or more characters with only a mix of lowercase
               and uppercase letters, numbers & symbols (!@#$%^&*)
             </p>
-          </div>
-          <div
-            class="hero__form-control hero__form-control--show-password"
-          >
-            <label>
+            <div class="hero__show-password">
               <input
                 type="checkbox"
-                name="show-password"
-                class="hero__checkbox js-showPasswordButton"
+                id="heroShowPassword"
+                class="sr-only hero__checkbox js-showPasswordButton"
               />
-              <span class="hero__label hero__label--show-password"
-                >Show password</span
+              <label
+                for="heroShowPassword"
+                class="hero__label hero__label--show-password"
               >
-            </label>
+                <img
+                  src="/svg/eye.svg"
+                  alt="Show Password"
+                  class="js-eyeIcon"
+                  width="24"
+                  height="24"
+                />
+              </label>
+            </div>
+          </div>
+          <div class="hero__form-control">
             <p class="hero__password-length">
               Password length:
               <span class="js-passwordLength">0</span>

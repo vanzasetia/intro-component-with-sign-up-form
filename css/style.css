@@ -3,8 +3,8 @@
 \*------------------------------------*/
 /*  Modern CSS reset - https://piccalil.li/blog/a-modern-css-reset/ */
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role="list"],
-ol[role="list"] {
+ul[role=list],
+ol[role=list] {
   list-style: none;
 }
 
@@ -88,8 +88,8 @@ video {
  * Remove default fieldset styles.
  */
 fieldset {
-  margin: 0;
   border: 0;
+  margin: 0;
   padding: 0;
 }
 
@@ -102,8 +102,8 @@ textarea {
 
 @media (prefers-reduced-motion: reduce) {
   *,
-  *::before,
-  *::after {
+*::before,
+*::after {
     background-attachment: initial !important;
     transition-delay: 0s !important;
     transition-duration: 0s !important;
@@ -160,8 +160,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: #ff7a7a url("../images/bg-intro-mobile.png") no-repeat
-    center center/cover;
+  background: #ff7a7a url("../images/bg-intro-mobile.png") no-repeat center center/cover;
   padding: 5.5rem 1.5rem;
 }
 @media screen and (min-width: 59.375em) {
@@ -237,8 +236,8 @@ video[autoplay]:not([muted]) {
  *
  * Source: https://github.com/AllThingsSmitty/css-protips#set-font-size-on-form-elements-for-a-better-mobile-experience
  */
-input[type="text"],
-input[type="number"],
+input[type=text],
+input[type=number],
 select,
 textarea {
   font-size: 1rem;
@@ -284,8 +283,7 @@ svg path {
   align-items: center;
   justify-content: center;
   z-index: 99;
-  background: #3a2046 url("../svg/exclamation-triangle.svg") no-repeat
-    center center/20rem;
+  background: #3a2046 url("../svg/exclamation-triangle.svg") no-repeat center center/20rem;
   padding: 0.625rem;
   width: 100%;
   min-height: 100vh;
@@ -407,12 +405,6 @@ svg path {
   margin-bottom: 1rem;
 }
 
-.hero__form-control--show-password {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
 .hero__input {
   display: block;
   border: 0.0625rem solid #dedede;
@@ -422,8 +414,7 @@ svg path {
   height: 3.5rem;
   letter-spacing: 0.015625rem;
 }
-.hero__input:focus-visible,
-.hero__input:focus {
+.hero__input:focus-visible, .hero__input:focus {
   outline: 0.1875rem dotted #3e3c49;
   outline-offset: 0.3125rem;
 }
@@ -434,14 +425,16 @@ svg path {
 
 .hero__input.is-invalid {
   border: 0.125rem solid #ff7a7a;
-  background: url("../svg/icon-error.svg") no-repeat center right
-    1.6875rem;
+  background: url("../svg/icon-error.svg") no-repeat center right 1.6875rem;
   color: #ff7a7a;
 }
-.hero__input.is-invalid:focus-visible,
-.hero__input.is-invalid:focus {
+.hero__input.is-invalid:focus-visible, .hero__input.is-invalid:focus {
   outline: 0.1875rem dotted #ff7a7a;
   outline-offset: 0.3125rem;
+}
+
+.hero__input--password.is-invalid {
+  background: none;
 }
 
 .hero__input.is-invalid ~ .hero__label {
@@ -450,16 +443,25 @@ svg path {
 
 .hero__label {
   position: absolute;
+  opacity: 0.75;
+}
+
+.hero__label--text {
   top: 0.9375rem;
   left: 1.3125rem;
-  opacity: 0.75;
   letter-spacing: 0.015625rem;
 }
 
 .hero__label--show-password {
-  position: static;
-  opacity: 1;
-  font-size: 0.75rem;
+  top: 0.9375rem;
+  right: 1.6875rem;
+  cursor: pointer;
+}
+
+.hero__checkbox:focus + .hero__label--show-password,
+.hero__checkbox:focus-visible + .hero__label--show-password {
+  outline: 0.1875rem dotted #3e3c49;
+  outline-offset: 0.3125rem;
 }
 
 .hero__alert {
@@ -469,19 +471,6 @@ svg path {
   font-size: 0.6875rem;
   font-weight: 500;
   font-style: italic;
-}
-
-.hero__checkbox {
-  position: relative;
-  top: 0.25rem;
-  cursor: pointer;
-  width: 1rem;
-  height: 1rem;
-}
-.hero__checkbox:focus-visible,
-.hero__checkbox:focus {
-  outline: 0.1875rem dotted #3e3c49;
-  outline-offset: 0.3125rem;
 }
 
 .hero__password-length {
@@ -501,13 +490,11 @@ svg path {
   color: white;
   font-size: 0.9375rem;
 }
-.hero__submit-button:focus-visible,
-.hero__submit-button:focus {
+.hero__submit-button:focus-visible, .hero__submit-button:focus {
   outline: 0.1875rem dotted #3e3c49;
   outline-offset: 0.3125rem;
 }
-.hero__submit-button:hover,
-.hero__submit-button:active {
+.hero__submit-button:hover, .hero__submit-button:active {
   background-color: #77e2b3;
 }
 @media screen and (prefers-reduced-motion: no-preference) {
@@ -529,13 +516,11 @@ svg path {
   color: #ff7a7a;
   font-weight: 700;
 }
-.hero__link:focus-visible,
-.hero__link:focus {
+.hero__link:focus-visible, .hero__link:focus {
   outline: 0.1875rem dotted #3e3c49;
   outline-offset: 0.3125rem;
 }
-.hero__link:hover,
-.hero__link:active {
+.hero__link:hover, .hero__link:active {
   color: #ffa2a2;
 }
 @media screen and (prefers-reduced-motion: no-preference) {
@@ -562,13 +547,11 @@ svg path {
   color: #ff7a7a;
   font-weight: 700;
 }
-.footer__link:focus-visible,
-.footer__link:focus {
+.footer__link:focus-visible, .footer__link:focus {
   outline: 0.1875rem dotted #3e3c49;
   outline-offset: 0.3125rem;
 }
-.footer__link:hover,
-.footer__link:active {
+.footer__link:hover, .footer__link:active {
   color: #ffa2a2;
 }
 @media screen and (prefers-reduced-motion: no-preference) {

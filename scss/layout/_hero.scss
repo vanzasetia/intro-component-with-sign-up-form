@@ -78,12 +78,6 @@ $-hero-gap: rem(45);
   margin-bottom: rem(16);
 }
 
-.hero__form-control--show-password {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
 .hero__input {
   display: block;
   border: rem(1) solid rgb(222, 222, 222);
@@ -109,22 +103,35 @@ $-hero-gap: rem(45);
   @include focus-visible($red);
 }
 
+.hero__input--password.is-invalid {
+  background: none;
+}
+
 .hero__input.is-invalid ~ .hero__label {
   color: $red;
 }
 
 .hero__label {
   position: absolute;
+  opacity: 0.75;
+}
+
+.hero__label--text {
   top: rem(15);
   left: rem(21);
-  opacity: 0.75;
   letter-spacing: rem(0.25);
 }
 
 .hero__label--show-password {
-  position: static;
-  opacity: 1;
-  font-size: rem(12);
+  top: rem(15);
+  right: rem(27);
+  cursor: pointer;
+}
+
+.hero__checkbox:focus + .hero__label--show-password,
+.hero__checkbox:focus-visible + .hero__label--show-password {
+  outline: rem(3) dotted $dark-blue;
+  outline-offset: rem(5);
 }
 
 .hero__alert {
@@ -134,16 +141,6 @@ $-hero-gap: rem(45);
   font-size: rem(11);
   font-weight: 500;
   font-style: italic;
-}
-
-.hero__checkbox {
-  position: relative;
-  top: rem(4);
-  cursor: pointer;
-  width: rem(16);
-  height: rem(16);
-
-  @include focus-visible($dark-blue);
 }
 
 .hero__password-length {
