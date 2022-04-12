@@ -297,6 +297,10 @@ Here's the difference between my RegEx and his RegEx. I increased the minimum nu
 + /^(?=.*[\d])(?=.*[A-Z])(?=.*[a-z])(?=.*[!@#$%^&*])[\w!@#$%^&*]{12,}$/
 ```
 
+I want to say thank you to [Grace Snow](https://www.frontendmentor.io/profile/grace-snow) for helping me to improve the solution by pointing two issues that the site have.
+- First, the layout was broken on her view, the "show password" checkbox and the "Password length" become two lines. I followed her suggestion where I made the show password checkbox into an eye icon in the password input. Now, the issue should be solved.
+- Second, the alert messages were too long and disappeared really fast. So, I made the alert messages short and concise and made the alert messages exist on the page until the user submit the form.
+
 ## License
 [(Back to top)](#table-of-contents)
 
