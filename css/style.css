@@ -195,24 +195,6 @@ img {
   font-weight: 400;
 }
 
-/**
- * Style Broken Images
- * 
- * Make it looks good even when the image doesn't load
- * Source: https://bitsofco.de/styling-broken-images/
- */
-img::before {
-  content: "We're sorry, the image below is broken.";
-  display: block;
-  margin-bottom: 0.625rem;
-}
-
-img::after {
-  content: "(url: " attr(src) ")";
-  display: block;
-  font-size: 0.75rem;
-}
-
 /** 
  * Avoid overloading a user with 
  * sound from a video that 
@@ -471,6 +453,11 @@ svg path {
   font-size: 0.6875rem;
   font-weight: 500;
   font-style: italic;
+}
+
+.hero__info {
+  margin-top: 0.375rem;
+  font-size: 0.6875rem;
 }
 
 .hero__password-length {
