@@ -57,6 +57,10 @@ $-hero-gap: rem(45);
   padding: rem(18) rem(66);
   text-align: center;
   font-weight: 700;
+
+  @media screen and (max-width: 21.875em) {
+    padding: rem(18) rem(36);
+  }
 }
 
 .hero__promotion--regular {

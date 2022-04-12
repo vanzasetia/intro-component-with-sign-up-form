@@ -366,6 +366,11 @@ svg path {
   text-align: center;
   font-weight: 700;
 }
+@media screen and (max-width: 21.875em) {
+  .hero__promotion {
+    padding: 1.125rem 2.25rem;
+  }
+}
 
 .hero__promotion--regular {
   font-weight: 400;
