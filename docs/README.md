@@ -44,12 +44,14 @@ These are the guidelines that I follow when I write the code.
 ### Articles
 - [User Story Examples in Product Development | Definition and Template](https://www.productplan.com/glossary/user-story/)
 - [Parts and Structure of an Email Address](https://techwelkin.com/parts-and-structure-of-an-email-address) - help understand the structure of an email address so that I can create a RegEx for email validation.
+- [Accessibility Matters - Checkbox by Ahmad Shadeed](https://www.a11ymatters.com/pattern/checkbox/) - help me creating a custom checkbox for the password toggle visibility.
 
 ### Tools
 - [Font face generator](https://everythingfonts.com/font-face)
 - [Can I include a tag to a tag?](https://caninclude.glitch.me/) - `p` can't not be a child element of `label` element so, I used `span` instead.
 - [Regexr](https://regexr.com/) - create the RegEx to validate user inputs.
 - [Squoosh](https://squoosh.app/) - reduce the file size of the banner and the screenshot.
+- [SVGOMG](https://jakearchibald.github.io/svgomg/) - optimize external icons.
 
 ### Validations
 - [HTML Validator](https://validator.w3.org/nu/) - [the site has a valid HTML!](https://validator.w3.org/nu/?doc=https%3A%2F%2Fofficialmentor.netlify.app%2F)
