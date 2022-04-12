@@ -143,6 +143,11 @@ $-hero-gap: rem(45);
   font-style: italic;
 }
 
+.hero__info {
+  margin-top: rem(6);
+  font-size: rem(11);
+}
+
 .hero__password-length {
   font-size: rem(12);
 }

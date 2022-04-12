@@ -1,6 +1,8 @@
 (function () {
   "use strict";
   const form = document.querySelector(".js-form");
+  const inputs = document.querySelectorAll(".js-input");
+  const alerts = document.querySelectorAll(".js-alert");
   const passwordInput = document.querySelector(".js-passwordInput");
   const showPasswordButton = document.querySelector(
     ".js-showPasswordButton"
@@ -12,22 +14,20 @@
     input.classList.add("is-invalid");
   };
 
-  const hideAlertMessage = (alert, input) => {
-    setTimeout(() => {
+  const clearAlertMessages = () => {
+    inputs.forEach(input => input.classList.remove("is-invalid"));
+    alerts.forEach(alert => {
       alert.setAttribute("hidden", "");
       alert.removeAttribute("role");
-      input.classList.remove("is-invalid");
-    }, 10000);
+    });
   };
 
   const handleAlert = input => {
-    const alerts = document.querySelectorAll(".js-alert");
     alerts.forEach(alert => {
       const inputID = input.dataset.id;
       const alertID = alert.dataset.id;
       if (inputID === alertID) {
         showAlertMessage(alert, input);
-        hideAlertMessage(alert, input);
       }
     });
   };
@@ -112,7 +112,6 @@
     let isEmailValid = false;
     let isPasswordValid = false;
 
-    const inputs = document.querySelectorAll(".js-input");
     inputs.forEach(input => {
       const id = input.dataset.id;
       const value = input.value;
@@ -146,6 +145,7 @@
   };
 
   const validateUserInputs = event => {
+    clearAlertMessages();
     const areAllUserInputsValid = checkAllUserInputs();
     if (!areAllUserInputsValid) {
       event.preventDefault();
