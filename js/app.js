@@ -95,7 +95,7 @@
      *
      */
     const passwordValidation =
-      /^(?=.*[\d])(?=.*[A-Z])(?=.*[a-z])(?=.*[!@#$%^&*])[\w!@#$%^&*]{12,}$/;
+      /^(?=.*[\d])(?=.*[A-Z])(?=.*[a-z])(?=.*[!@#$%^&*])[\w!@#$%^&*]{8,}$/;
     const isValid = passwordValidation.test(password);
     if (!isValid) {
       handleAlert(input);
