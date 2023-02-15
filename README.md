@@ -1,54 +1,15 @@
-![banner](./images/banner.jpg)
-
-<p align="left">
-  <a href="https://www.frontendmentor.io/challenges?difficulties=1" target="_blank"><img src="https://img.shields.io/badge/Difficulty-Newbie-14C2C8?style=for-the-badge&logo=frontendmentor" alt="Difficulty"></a>
-  <img alt="Repo size" src="https://img.shields.io/github/repo-size/vanzasetia/intro-component-with-sign-up-form?style=for-the-badge&logo=github">
-  <a href="https://twitter.com/vanzasetia" target="_blank"><img src="https://img.shields.io/twitter/follow/vanzasetia?logo=twitter&style=for-the-badge" alt="Twitter followers." /></a>
-  <img alt="Last commit" src="https://img.shields.io/github/last-commit/vanzasetia/intro-component-with-sign-up-form?style=for-the-badge&logo=git">
-  <img alt="Netlify" src="https://img.shields.io/netlify/2d0e1e24-68d8-4301-9f44-6098c31f3e88?style=for-the-badge&logo=netlify">
-  <img alt="License" src="https://img.shields.io/github/license/vanzasetia/intro-component-with-sign-up-form?color=green&style=for-the-badge&logo=github">
-</p>
-
-<p>
-  <a href="http://jigsaw.w3.org/css-validator/validator?lang=en&profile=css3svg&uri=https%3A%2F%2Fofficialmentor.netlify.app%2F&usermedium=all&vextwarning=&warning=1">
-    <img style="border:0;width:88px;height:31px"
-        src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
-        alt="Valid CSS!" />
-    </a>
-    <a href="https://github.com/standard/semistandard">
-      <img style="border:0;height:31px"
-        src="https://raw.githubusercontent.com/standard/semistandard/master/badge.svg"
-        alt="JavaScript Style Guide" />
-    </a>
-</p>
+![It's finally done! Intro component with sign-up form. Challenge by Frontend Mentor. Coded by Vanza Setia. Banner.](./images/banner.jpg)
 
 # Intro Component with Sign-up Form
 
-## Table of contents
-- [Overview](#overview)
-  - [Introduction](#introduction)
-  - [The challenge](#the-challenge)
-  - [Links](#links)
-  - [Screenshots](#screenshots)
-- [My process](#my-process)
-  - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
-  - [Useful resources](#useful-resources)
-- [Author](#author)
-- [Acknowledgements](#acknowledgements)
-- [License](#license)
-- [References](#references)
+Welcome!
 
-## Overview
-[(Back to top)](#table-of-contents)
-
-### Introduction
-Welcome to the `README.md` of this repo! The purpose of creating this project is to sharpen my coding skill.
+I created this project to sharpen my coding skill.
 
 In this file, I'm going to tell you everything starting from the tools that I used, and much more.
 
-That's it for the introduction and **happy reading!**
-### The Challenge
+## The challenge
+
 My challenge is to build out this landing page and get it looking as close to the design as possible.
 
 My users should be able to:
@@ -59,33 +20,32 @@ My users should be able to:
   - Any input field is empty
   - The email address is not formatted correctly
 - Toggle the password visibility
-- Know the length of their password (without making them count it by themselves) 
+- Know the length of their password (without making them count it by themselves)
 
-### Links
+## Links
+
 - [Live Review](https://officialmentor.netlify.app/)
-- [Frontend Mentor Solution Page]()
+- [Frontend Mentor Solution Page](https://www.frontendmentor.io/solutions/intro-component-with-signup-form-html-css-sass-js-By3rWK2Mq)
+- [Documentation](./docs/README.md)
 
-### Screenshots
+## Screenshots
 
 ![Desktop](./screenshots/desktop.jpg)
 
-## My Process
-[(Back to top)](#table-of-contents)
+## Built With
 
-### Built With
-- **Following best practices**\* 
-- Semantic HTML
-- [BEM (Block, Element, Modifier)](https://sparkbox.com/foundry/bem_by_example) Class *Naming Convention*
+- HTML
+- CSS Flexbox
 - [Sass](https://sass-lang.com/)
 - JavaScript
-- CSS Flexbox
+- [BEM (Block, Element, Modifier)](https://sparkbox.com/foundry/bem_by_example) Class *Naming Convention*
 - Mobile-first workflow
 
-> \* I follow guidelines. [See what guidelines that I follow.](./docs/README.md#guidelines)
+## What I Learned
 
-### What I Learned
+I learned quite a lot of things when I was building this project.
 
-#### User Story
+### User Story
 
 The [definition of the "User story" from wikipedia](https://en.wikipedia.org/wiki/User_story) is the following:
 > [...] **user story** is [...] natural language description of features of a software system.
@@ -95,6 +55,7 @@ It means that this is just the way for a developer to **explain a feature from a
 I have two users that I test this site. I tested it myself and my mother.
 
 #### First User Story (Myself)
+
 So, I struggling to remember what I've just written on the password input. As a result, I have a story that goes like this.
 
 > As a user, I want to be able to see the password that I've written so that I know what I wrote.
@@ -102,6 +63,7 @@ So, I struggling to remember what I've just written on the password input. As a 
 Now, after I know the problem then I create the "Show password" checkbox where it will change the type of the input to a text when it is checked. This way, I can easily know what I've written previously before I submit the form.
 
 #### Second User Story (My Mother)
+
 I don't have any problem filling the form after I add the "Show password" functionality so I would know how other users' experiences or stories when they try to fill the form. My mother easily fills the first name, last name, and email input. However, my mother has two problems when she tries to fill in the password input.
 
 - First, she didn't know what kind of symbols she has to put to make the password valid.
@@ -115,15 +77,15 @@ So, based on this problem I can create two user stories that look like this.
 As a result, I improved the alert message for the password by telling the user the exact symbols that the user has to use for a valid password.
 
 ```diff
-- Use 12 or more characters with only a mix of lowercase and uppercase letters, numbers & symbols
-+ Use 12 or more characters with only a mix of lowercase and uppercase letters, numbers & symbols (!@#$%^&*)
+- Use 8 or more characters with only a mix of lowercase and uppercase letters, numbers & symbols
++ Use 8 or more characters with only a mix of lowercase and uppercase letters, numbers & symbols (!@#$%^&*)
 ```
 
 Then I added a new feature where the user can see the password length easily.
 
-#### Separation of Concerns
+### Separation of Concerns
 
-What is **Separation of Concerns**?
+What is that?
 
 Separation of concerns is one of the programming principles which ensures that a "thing" is only responsible for itself and nothing else. For example, as a developer, I should be able to focus on one thing without worrying about anything else. In this case, I should be able to focus on accessibility without worrying about the styling and the functionality. Then, when I work with the CSS, I should be able to work with the CSS without breaking the functionality or caring how the HTML structure.
 
@@ -273,12 +235,12 @@ const handleAlert = input => {
 
 *By writing my code in this file, I might be against the principle which means that if I change my code on the source code, I need to remember to change the code right here.*
 
-### Useful Resources
+## Useful Resources
+
 - [JavaScript Password RegEx by Harish Chaudhari](https://gist.github.com/HarishChaudhari/0dd5514ce430991a1b1b8fa04e8b72a4) - This helps me validate the user password input. It makes sure that the user writes a strong password.
 - [RegExr](https://regexr.com/) - This tool helps me learn and eventually create my RegEx to validate users' inputs.
 
 ## Author
-[(Back to top)](#table-of-contents)
 
 - Frontend Mentor - [@vanzasetia](https://frontendmentor.io/profile/vanzasetia)
 - Twitter - [@vanzasetia](https://twitter.com/vanzasetia)
@@ -286,7 +248,6 @@ const handleAlert = input => {
 - Want to see me on other platform? [Check my linktree!](https://linktr.ee/vanzasetia)
 
 ## Acknowledgements
-[(Back to top)](#table-of-contents)
 
 The password RegEx is a copy-paste from [a gist](https://gist.github.com/HarishChaudhari/0dd5514ce430991a1b1b8fa04e8b72a4) by [@HarishChaudhari](https://gist.github.com/HarishChaudhari).
 
@@ -298,23 +259,10 @@ Here's the difference between my RegEx and his RegEx. I increased the minimum nu
 ```
 
 I want to say thank you to [Grace Snow](https://www.frontendmentor.io/profile/grace-snow) for helping me to improve the solution by pointing two issues that the site have.
+
 - First, the layout was broken on her view, the "show password" checkbox and the "Password length" become two lines. I followed her suggestion where I made the show password checkbox into an eye icon in the password input. Now, the issue should be solved.
 - Second, the alert messages were too long and disappeared really fast. So, I made the alert messages short and concise and made the alert messages exist on the page until the user submit the form.
 
 ## License
-[(Back to top)](#table-of-contents)
 
->You can check out [the full license](./LICENSE)
-
-This project is licensed under the terms of the MIT license.
-
-For those of you who are wondering, why do I need to license this? 
-- Well, first it's free. 😆
-- Second I checked this [Choose license website](https://choosealicense.com/) to help me chose a license.
-- The last reason, if I don't want to choose a license, then [here's what gonna happen](https://choosealicense.com/no-permission/).
-
-## References
-
-[(Back to top)](#table-of-contents)
-
-> See the [documentation.](./docs/README.md)
+[MIT](./LICENSE)
