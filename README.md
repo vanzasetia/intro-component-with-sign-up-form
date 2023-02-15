@@ -41,35 +41,35 @@ My users should be able to:
 - [BEM (Block, Element, Modifier)](https://sparkbox.com/foundry/bem_by_example) Class *Naming Convention*
 - Mobile-first workflow
 
-## What I Learned
+## What I learned
 
-I learned quite a lot of things when I was building this project.
+I learned a lot of things when I was building this project.
 
-### User Story
+### User story
 
 The [definition of the "User story" from wikipedia](https://en.wikipedia.org/wiki/User_story) is the following:
 > [...] **user story** is [...] natural language description of features of a software system.
 
-It means that this is just the way for a developer to **explain a feature from a user’s point of view**. Usually, a user story is written from the user’s perspective and follows the format: “As [a user persona], I want [to perform this action] so that [I can accomplish this goal].”
+In other words, it is the way for a developer to **explain a feature from a user’s point of view**. Usually, a user story is written from the user’s perspective and follows the format: “As [a user persona], I want [to perform this action] so that [I can accomplish this goal].”
 
 I have two users that I test this site. I tested it myself and my mother.
 
-#### First User Story (Myself)
+#### First user story (myself)
 
-So, I struggling to remember what I've just written on the password input. As a result, I have a story that goes like this.
+I was struggling to remember what I had just written on the password input. As a result, I have a story that goes like this.
 
 > As a user, I want to be able to see the password that I've written so that I know what I wrote.
 
-Now, after I know the problem then I create the "Show password" checkbox where it will change the type of the input to a text when it is checked. This way, I can easily know what I've written previously before I submit the form.
+Now, after I know the problem then I create the "Show password" checkbox where it will change the type of the input to a text when it is checked. Now, I can easily view the password that I've written before I submit the form.
 
-#### Second User Story (My Mother)
+#### Second user story (my mother)
 
-I don't have any problem filling the form after I add the "Show password" functionality so I would know how other users' experiences or stories when they try to fill the form. My mother easily fills the first name, last name, and email input. However, my mother has two problems when she tries to fill in the password input.
+I don't have any problem filling the form after I add the "Show password" functionality so I would know how other users' experiences or stories when they try to fill the form. My mother easily fills the first name, last name, and email input. But, my mother has two problems when she tries to fill in the password input.
 
 - First, she didn't know what kind of symbols she has to put to make the password valid.
 - Second, she had a problem where she had to count the password herself because she keeps getting the alert message every time she clicked the submit button.
 
-So, based on this problem I can create two user stories that look like this.
+Based on those problems I can create two user stories that look like this.
 
 - First, As a user, I want to be able to know the exact symbols that are required for the password to be valid.
 - Second, as a user, I want to be able to know the exact length of the password that I've written so that I don't need to count it by myself.
@@ -83,6 +83,8 @@ As a result, I improved the alert message for the password by telling the user t
 
 Then I added a new feature where the user can see the password length easily.
 
+**Note: The above content is outdated because the password rules do not exist anymore. But, I keep the content since the main topic is about user story.**
+
 ### Password rules are useless
 
 It turns out that creating rules to create password makes it harder for users to fill the password input. Meaning, it makes the form inaccessible.
@@ -93,7 +95,7 @@ It turns out that creating rules to create password makes it harder for users to
 
 I decided to only have one rule for the password input—valid password should contain at least 8 characters. This should make it much easier for users to input any password format that they like.
 
-### Separation of Concerns
+### Separation of concerns
 
 What is that?
 
@@ -247,10 +249,10 @@ const handleAlert = input => {
 
 ## Author
 
-- Frontend Mentor - [@vanzasetia](https://frontendmentor.io/profile/vanzasetia)
-- Twitter - [@vanzasetia](https://twitter.com/vanzasetia)
-- Code Newbie - [@vanzasetia](https://community.codenewbie.org/vanzasetia)
-- Want to see me on other platform? [Check my linktree!](https://linktr.ee/vanzasetia)
+- [Frontend Mentor | Vanza Setia's profile](https://www.frontendmentor.io/profile/vanzasetia)
+- [Vanza Setia (@vanzasetia) / Twitter](https://twitter.com/vanzasetia)
+- [Vanza Setia - CodeNewbie Community 🌱](https://community.codenewbie.org/vanzasetia)
+- You can find me on other social media platform as well — [Social Media Profiles of Vanza Setia](https://vslinks.netlify.app/)
 
 ## Acknowledgements
 
