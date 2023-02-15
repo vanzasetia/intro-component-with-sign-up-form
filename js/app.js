@@ -85,7 +85,7 @@
     /**
      *
      * Passwords must be
-     * - At least 12 characters long, max length anything
+     * - At least 8 characters long, max length anything
      * - Include at least 1 lowercase letter
      * - 1 capital letter
      * - 1 number
