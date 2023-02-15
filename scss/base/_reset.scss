@@ -1,50 +1,58 @@
 @use "../abstracts" as *;
 
-@media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    animation-duration: 1ms !important;
-    animation-delay: -1ms !important;
-    animation-iteration-count: 1 !important;
-    transition-delay: 0s !important;
-    transition-duration: 0s !important;
-    background-attachment: initial !important;
-    scroll-behavior: auto !important;
-  }
+@font-face {
+  font-style: normal;
+  font-weight: 700;
+  src: local("Poppins"), local("Poppins Bold"), local("Poppins-Bold"),
+    url("/fonts/PoppinsBold.woff2") format("woff2"),
+    url("/fonts/PoppinsBold.woff") format("woff");
+  font-family: Poppins;
+  font-display: swap;
 }
 
-html {
-  box-sizing: border-box;
+@font-face {
+  font-style: normal;
+  font-weight: 600;
+  src: local("Poppins"), local("Poppins SemiBold"), local("Poppins-SemiBold"),
+    url("/fonts/PoppinsSemiBold.woff2") format("woff2"),
+    url("/fonts/PoppinsSemiBold.woff") format("woff");
+  font-family: Poppins;
+  font-display: swap;
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 500;
+  src: local("Poppins"), local("Poppins Medium"), local("Poppins-Medium"),
+    url("/fonts/PoppinsMedium.woff2") format("woff2"),
+    url("/fonts/PoppinsMedium.woff") format("woff");
+  font-family: Poppins;
+  font-display: swap;
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 400;
+  src: local("Poppins"), local("Poppins Regular"), local("Poppins-Regular"),
+    url("/fonts/PoppinsRegular.woff2") format("woff2"),
+    url("/fonts/PoppinsRegular.woff") format("woff");
+  font-family: Poppins;
+  font-display: swap;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
 }
 
 *,
 *::after,
 *::before {
-  box-sizing: inherit;
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-::selection {
-  background-color: rgb(22 95 204);
-  color: rgb(242 242 242);
-}
-
-::selection {
-  background-color: rgb(22 95 204);
-  color: rgb(242 242 242);
-}
-
-/**
- * Screen Reader Class
- * 
- * To hide content visually.
- *
- * For more information: https://gist.github.com/ffoodd/000b59f431e3e64e4ce1a24d5bb36034
- */
 .sr-only {
-  clip-path: inset(50%) !important;
   position: absolute !important;
   clip-path: inset(50%) !important;
   margin: -1px !important;
@@ -64,6 +72,9 @@ body {
   background: $red url("../images/bg-intro-mobile.png") no-repeat center
     center/cover;
   padding: rem(88) rem(24);
+  min-height: 100vh;
+  line-height: 1.5;
+  text-rendering: optimizeSpeed;
 
   @include breakpoint-up("tiny") {
     background-image: url("../images/bg-intro-desktop.png");
@@ -78,64 +89,40 @@ footer {
   font-family: Poppins, sans-serif;
 }
 
-p {
-  font-size: 1em;
-}
-
-ul {
-  list-style: none;
+img,
+svg {
+  vertical-align: middle;
 }
 
 img {
   display: block;
   max-width: 100%;
   height: auto;
-  font-weight: 400;
-  line-height: 1.6;
-  font-family: sans-serif;
-  text-align: center;
 }
 
-/** 
- * Avoid overloading a user with 
- * sound from a video that 
- * autoplays when the page is loaded.
- *
- * Source: https://github.com/AllThingsSmitty/css-protips#hide-autoplay-videos-that-arent-muted
- */
-video[autoplay]:not([muted]) {
-  display: none;
-}
-
-/**
- * Set font-size on Form Elements for a 
- * Better Mobile Experience
- *
- * To avoid mobile browsers (iOS Safari,
- * et al.) from zooming in on HTML form 
- * elements when a <select> drop-down is
- * tapped, add font-size to the selector
- * rule.
- *
- * Source: https://github.com/AllThingsSmitty/css-protips#set-font-size-on-form-elements-for-a-better-mobile-experience
- */
-input[type="text"],
-input[type="number"],
-select,
-textarea {
-  font-size: 1rem;
-}
-
-/** 
- * Using currentColor to inherit the 
- * color value 
- */
 svg path {
   fill: currentColor;
 }
 
-.hidden {
-  visibility: hidden;
-  width: 0.0625rem;
-  height: 0;
+input,
+button {
+  font: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 1ms !important;
+    animation-delay: -1ms !important;
+    animation-iteration-count: 1 !important;
+    transition-delay: 0s !important;
+    transition-duration: 0s !important;
+    background-attachment: initial !important;
+    scroll-behavior: auto !important;
+  }
+
+  html:focus-within {
+    scroll-behavior: auto;
+  }
 }
