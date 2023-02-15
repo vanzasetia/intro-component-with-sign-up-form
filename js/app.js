@@ -82,21 +82,7 @@
   };
 
   const validatePassword = (password, input) => {
-    /**
-     *
-     * Passwords must be
-     * - At least 8 characters long, max length anything
-     * - Include at least 1 lowercase letter
-     * - 1 capital letter
-     * - 1 number
-     * - 1 special character => !@#$%^&*
-     *
-     * @author Harish Chaudhari <harishchaudhari.com>
-     *
-     */
-    const passwordValidation =
-      /^(?=.*[\d])(?=.*[A-Z])(?=.*[a-z])(?=.*[!@#$%^&*])[\w!@#$%^&*]{8,}$/;
-    const isValid = passwordValidation.test(password);
+    const isValid = password.length >= 8;
     if (!isValid) {
       handleAlert(input);
     }

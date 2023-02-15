@@ -83,6 +83,16 @@ As a result, I improved the alert message for the password by telling the user t
 
 Then I added a new feature where the user can see the password length easily.
 
+### Password rules are useless
+
+It turns out that creating rules to create password makes it harder for users to fill the password input. Meaning, it makes the form inaccessible.
+
+- [Dumb Password Rules](https://dumbpasswordrules.com/)
+- [Password Requirements Shaming](https://password-shaming.tumblr.com/)
+- [Bad Password Policies](https://badpasswordpolicies.tumblr.com/)
+
+I decided to only have one rule for the password input—valid password should contain at least 8 characters. This should make it much easier for users to input any password format that they like.
+
 ### Separation of Concerns
 
 What is that?
@@ -235,11 +245,6 @@ const handleAlert = input => {
 
 *By writing my code in this file, I might be against the principle which means that if I change my code on the source code, I need to remember to change the code right here.*
 
-## Useful Resources
-
-- [JavaScript Password RegEx by Harish Chaudhari](https://gist.github.com/HarishChaudhari/0dd5514ce430991a1b1b8fa04e8b72a4) - This helps me validate the user password input. It makes sure that the user writes a strong password.
-- [RegExr](https://regexr.com/) - This tool helps me learn and eventually create my RegEx to validate users' inputs.
-
 ## Author
 
 - Frontend Mentor - [@vanzasetia](https://frontendmentor.io/profile/vanzasetia)
@@ -248,15 +253,6 @@ const handleAlert = input => {
 - Want to see me on other platform? [Check my linktree!](https://linktr.ee/vanzasetia)
 
 ## Acknowledgements
-
-The password RegEx is a copy-paste from [a gist](https://gist.github.com/HarishChaudhari/0dd5514ce430991a1b1b8fa04e8b72a4) by [@HarishChaudhari](https://gist.github.com/HarishChaudhari).
-
-Here's the difference between my RegEx and his RegEx. I increased the minimum number of characters from 8 to 12.
-
-```diff
-- /^(?=.*[\d])(?=.*[A-Z])(?=.*[a-z])(?=.*[!@#$%^&*])[\w!@#$%^&*]{8,}$/
-+ /^(?=.*[\d])(?=.*[A-Z])(?=.*[a-z])(?=.*[!@#$%^&*])[\w!@#$%^&*]{12,}$/
-```
 
 I want to say thank you to [Grace Snow](https://www.frontendmentor.io/profile/grace-snow) for helping me to improve the solution by pointing two issues that the site have.
 
