@@ -169,7 +169,7 @@ $-hero-gap: rem(45);
     background-color: rgb(119 226 179);
   }
 
-  @media screen and (prefers-reduced-motion: no-preference) {
+  @media (prefers-reduced-motion: no-preference) {
     transition: background-color 150ms ease-in-out;
   }
 }
@@ -180,18 +180,4 @@ $-hero-gap: rem(45);
   font-size: rem(11);
   line-height: 1.9;
   text-align: center;
-}
-
-.hero__link {
-  color: $red;
-  font-weight: 700;
-  text-decoration: none;
-
-  @include on-event {
-    color: lighten-color($red, 30%);
-  }
-
-  @media screen and (prefers-reduced-motion: no-preference) {
-    transition: color 150ms ease-in-out;
-  }
 }

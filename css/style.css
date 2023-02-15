@@ -81,6 +81,23 @@ body {
   outline-offset: 0.3125rem;
 }
 
+a {
+  color: rgb(255, 122, 122);
+  font-weight: 700;
+  text-decoration-color: transparent;
+}
+a:hover,
+a:active {
+  color: #ffa2a2;
+  text-decoration-color: initial;
+  text-decoration-thickness: 0.125em;
+}
+@media (prefers-reduced-motion: no-preference) {
+  a {
+    transition: color 150ms ease-in-out;
+  }
+}
+
 main,
 footer {
   color: rgb(255, 255, 255);
@@ -314,7 +331,7 @@ button {
 .hero__submit-button:active {
   background-color: rgb(119, 226, 179);
 }
-@media screen and (prefers-reduced-motion: no-preference) {
+@media (prefers-reduced-motion: no-preference) {
   .hero__submit-button {
     transition: background-color 150ms ease-in-out;
   }
@@ -328,21 +345,6 @@ button {
   text-align: center;
 }
 
-.hero__link {
-  color: rgb(255, 122, 122);
-  font-weight: 700;
-  text-decoration: none;
-}
-.hero__link:hover,
-.hero__link:active {
-  color: #ffa2a2;
-}
-@media screen and (prefers-reduced-motion: no-preference) {
-  .hero__link {
-    transition: color 150ms ease-in-out;
-  }
-}
-
 .footer {
   margin-top: 6.25rem;
   width: 100%;
@@ -353,20 +355,5 @@ button {
 @media screen and (min-width: 59.375em) {
   .footer {
     width: auto;
-  }
-}
-
-.footer__link {
-  color: rgb(255, 122, 122);
-  font-weight: 700;
-  text-decoration: none;
-}
-.footer__link:hover,
-.footer__link:active {
-  color: #ffa2a2;
-}
-@media screen and (prefers-reduced-motion: no-preference) {
-  .footer__link {
-    transition: color 150ms ease-in-out;
   }
 }

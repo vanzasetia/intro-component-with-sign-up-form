@@ -86,6 +86,22 @@ body {
   outline-offset: rem(5);
 }
 
+a {
+  color: $red;
+  font-weight: 700;
+  text-decoration-color: transparent;
+
+  @include on-event {
+    color: lighten-color($red, 30%);
+    text-decoration-color: initial;
+    text-decoration-thickness: 0.125em;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    transition: color 150ms ease-in-out;
+  }
+}
+
 main,
 footer {
   color: $white;
