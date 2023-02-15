@@ -17,8 +17,6 @@
   font-weight: 700;
   text-decoration: none;
 
-  @include focus-visible($dark-blue);
-
   @include on-event {
     color: lighten-color($red, 30%);
   }

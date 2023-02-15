@@ -76,6 +76,11 @@ body {
   }
 }
 
+:focus {
+  outline: 0.1875rem dotted rgb(62, 60, 73);
+  outline-offset: 0.3125rem;
+}
+
 main,
 footer {
   color: rgb(255, 255, 255);
@@ -232,11 +237,6 @@ button {
   height: 3.5rem;
   letter-spacing: 0.015625rem;
 }
-.hero__input:focus-visible,
-.hero__input:focus {
-  outline: 0.1875rem dotted rgb(62, 60, 73);
-  outline-offset: 0.3125rem;
-}
 
 .hero__input:not(:placeholder-shown) ~ .hero__label {
   opacity: 0;
@@ -246,11 +246,6 @@ button {
   border: 0.125rem solid rgb(255, 122, 122);
   background: url("../svg/icon-error.svg") no-repeat center right 1.6875rem;
   color: rgb(255, 122, 122);
-}
-.hero__input.is-invalid:focus-visible,
-.hero__input.is-invalid:focus {
-  outline: 0.1875rem dotted rgb(255, 122, 122);
-  outline-offset: 0.3125rem;
 }
 
 .hero__input--password.is-invalid {
@@ -315,11 +310,6 @@ button {
   font-size: 0.9375rem;
   text-transform: uppercase;
 }
-.hero__submit-button:focus-visible,
-.hero__submit-button:focus {
-  outline: 0.1875rem dotted rgb(62, 60, 73);
-  outline-offset: 0.3125rem;
-}
 .hero__submit-button:hover,
 .hero__submit-button:active {
   background-color: rgb(119, 226, 179);
@@ -342,11 +332,6 @@ button {
   color: rgb(255, 122, 122);
   font-weight: 700;
   text-decoration: none;
-}
-.hero__link:focus-visible,
-.hero__link:focus {
-  outline: 0.1875rem dotted rgb(62, 60, 73);
-  outline-offset: 0.3125rem;
 }
 .hero__link:hover,
 .hero__link:active {
@@ -375,11 +360,6 @@ button {
   color: rgb(255, 122, 122);
   font-weight: 700;
   text-decoration: none;
-}
-.footer__link:focus-visible,
-.footer__link:focus {
-  outline: 0.1875rem dotted rgb(62, 60, 73);
-  outline-offset: 0.3125rem;
 }
 .footer__link:hover,
 .footer__link:active {

@@ -1,13 +1,6 @@
 @use "variables" as *;
 @use "functions" as *;
 
-@mixin focus-visible($color) {
-  &:focus-visible, &:focus {
-    outline: rem(3) dotted $color;
-    outline-offset: rem(5);
-  }
-}
-
 @mixin set-background-color($color) {
   background-color: $color;
   color: set-color($color);

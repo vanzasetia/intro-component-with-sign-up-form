@@ -91,8 +91,6 @@ $-hero-gap: rem(45);
   width: 100%;
   height: rem(56);
   letter-spacing: rem(0.25);
-
-  @include focus-visible($dark-blue);
 }
 
 .hero__input:not(:placeholder-shown) ~ .hero__label {
@@ -103,8 +101,6 @@ $-hero-gap: rem(45);
   border: rem(2) solid $red;
   background: url("../svg/icon-error.svg") no-repeat center right rem(27);
   color: $red;
-
-  @include focus-visible($red);
 }
 
 .hero__input--password.is-invalid {
@@ -169,8 +165,6 @@ $-hero-gap: rem(45);
   font-size: rem(15);
   text-transform: uppercase;
 
-  @include focus-visible($dark-blue);
-
   @include on-event {
     background-color: rgb(119 226 179);
   }
@@ -192,8 +186,6 @@ $-hero-gap: rem(45);
   color: $red;
   font-weight: 700;
   text-decoration: none;
-
-  @include focus-visible($dark-blue);
 
   @include on-event {
     color: lighten-color($red, 30%);

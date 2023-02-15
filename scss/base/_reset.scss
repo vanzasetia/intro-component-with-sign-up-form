@@ -81,6 +81,11 @@ body {
   }
 }
 
+:focus {
+  outline: rem(3) dotted $dark-blue;
+  outline-offset: rem(5);
+}
+
 main,
 footer {
   color: $white;
