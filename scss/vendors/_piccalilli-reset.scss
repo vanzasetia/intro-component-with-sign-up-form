@@ -1,6 +1,7 @@
-/*------------------------------------*\
+/* ------------------------------------*\
   #CSS-RESET
-\*------------------------------------*/
+\*------------------------------------ */
+
 /*  Modern CSS reset - https://piccalil.li/blog/a-modern-css-reset/ */
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
@@ -17,8 +18,8 @@ html:focus-within {
 /* Set core body defaults */
 body {
   min-height: 100vh;
-  text-rendering: optimizeSpeed;
   line-height: 1.5;
+  text-rendering: optimizeSpeed;
 }
 
 /* A elements that don't have a class get default styles */

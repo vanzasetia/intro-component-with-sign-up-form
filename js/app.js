@@ -4,9 +4,7 @@
   const inputs = document.querySelectorAll(".js-input");
   const alerts = document.querySelectorAll(".js-alert");
   const passwordInput = document.querySelector(".js-passwordInput");
-  const showPasswordButton = document.querySelector(
-    ".js-showPasswordButton"
-  );
+  const showPasswordButton = document.querySelector(".js-showPasswordButton");
 
   const showAlertMessage = (alert, input) => {
     alert.removeAttribute("hidden");
@@ -15,15 +13,15 @@
   };
 
   const clearAlertMessages = () => {
-    inputs.forEach(input => input.classList.remove("is-invalid"));
-    alerts.forEach(alert => {
+    inputs.forEach((input) => input.classList.remove("is-invalid"));
+    alerts.forEach((alert) => {
       alert.setAttribute("hidden", "");
       alert.removeAttribute("role");
     });
   };
 
-  const handleAlert = input => {
-    alerts.forEach(alert => {
+  const handleAlert = (input) => {
+    alerts.forEach((alert) => {
       const inputID = input.dataset.id;
       const alertID = alert.dataset.id;
       if (inputID === alertID) {
@@ -42,8 +40,7 @@
      * @author Vanza Setia <https://github.com/vanzasetia>
      *
      */
-    const nameValidation =
-      /^((?=.*[aiueo])|(?=.*[AIUEO]))[A-Za-z]{2,}$/;
+    const nameValidation = /^((?=.*[aiueo])|(?=.*[AIUEO]))[A-Za-z]{2,}$/;
     const isValid = nameValidation.test(name);
     if (!isValid) {
       handleAlert(input);
@@ -112,7 +109,7 @@
     let isEmailValid = false;
     let isPasswordValid = false;
 
-    inputs.forEach(input => {
+    inputs.forEach((input) => {
       const id = input.dataset.id;
       const value = input.value;
       switch (id) {
@@ -129,22 +126,17 @@
           isPasswordValid = validatePassword(value, input);
           break;
         default:
-          console.error(
-            `The input ${id} is not match the existing data-id`
-          );
+          console.error(`The input ${id} is not match the existing data-id`);
       }
     });
 
     const isFormValid =
-      isFirstNameValid &&
-      isLastNameValid &&
-      isEmailValid &&
-      isPasswordValid;
+      isFirstNameValid && isLastNameValid && isEmailValid && isPasswordValid;
 
     return isFormValid;
   };
 
-  const validateUserInputs = event => {
+  const validateUserInputs = (event) => {
     clearAlertMessages();
     const areAllUserInputsValid = checkAllUserInputs();
     if (!areAllUserInputsValid) {
@@ -166,16 +158,11 @@
   };
 
   const countPasswordLength = () => {
-    const passwordLength = document.querySelector(
-      ".js-passwordLength"
-    );
+    const passwordLength = document.querySelector(".js-passwordLength");
     passwordLength.textContent = passwordInput.value.length;
   };
 
   form.addEventListener("submit", validateUserInputs);
-  showPasswordButton.addEventListener(
-    "click",
-    togglePasswordVisibility
-  );
+  showPasswordButton.addEventListener("click", togglePasswordVisibility);
   passwordInput.addEventListener("input", countPasswordLength);
 })();

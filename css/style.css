@@ -1,10 +1,10 @@
-/*------------------------------------*\
+/* ------------------------------------*\
   #CSS-RESET
-\*------------------------------------*/
+\*------------------------------------ */
 /*  Modern CSS reset - https://piccalil.li/blog/a-modern-css-reset/ */
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role=list],
-ol[role=list] {
+ul[role="list"],
+ol[role="list"] {
   list-style: none;
 }
 
@@ -16,8 +16,8 @@ html:focus-within {
 /* Set core body defaults */
 body {
   min-height: 100vh;
-  text-rendering: optimizeSpeed;
   line-height: 1.5;
+  text-rendering: optimizeSpeed;
 }
 
 /* A elements that don't have a class get default styles */
@@ -39,9 +39,9 @@ select {
     scroll-behavior: auto;
   }
 }
-/*------------------------------------*\
+/* ------------------------------------*\
   #HTML5-BOILERPLATE
-\*------------------------------------*/
+\*------------------------------------ */
 /* Source: https://github.com/h5bp/html5-boilerplate/blob/main/dist/css/style.css */
 /* main.css 2.1.0 | MIT License | https://github.com/h5bp/main.css#readme */
 /*
@@ -62,7 +62,7 @@ select {
  * https://stackoverflow.com/a/16982510/7133471
  *
  */
-::-moz-selection {
+::selection {
   text-shadow: none;
 }
 
@@ -88,8 +88,8 @@ video {
  * Remove default fieldset styles.
  */
 fieldset {
-  border: 0;
   margin: 0;
+  border: 0;
   padding: 0;
 }
 
@@ -102,14 +102,14 @@ textarea {
 
 @media (prefers-reduced-motion: reduce) {
   *,
-*::before,
-*::after {
-    background-attachment: initial !important;
-    transition-delay: 0s !important;
-    transition-duration: 0s !important;
+  *::before,
+  *::after {
     animation-duration: 1ms !important;
     animation-delay: -1ms !important;
     animation-iteration-count: 1 !important;
+    transition-delay: 0s !important;
+    transition-duration: 0s !important;
+    background-attachment: initial !important;
     scroll-behavior: auto !important;
   }
 }
@@ -126,13 +126,13 @@ html {
 }
 
 ::selection {
-  background-color: #165fcc;
-  color: #f2f2f2;
+  background-color: rgb(22, 95, 204);
+  color: rgb(242, 242, 242);
 }
 
-::-moz-selection {
-  background-color: #165fcc;
-  color: #f2f2f2;
+::selection {
+  background-color: rgb(22, 95, 204);
+  color: rgb(242, 242, 242);
 }
 
 /**
@@ -143,10 +143,10 @@ html {
  * For more information: https://gist.github.com/ffoodd/000b59f431e3e64e4ce1a24d5bb36034
  */
 .sr-only {
-  position: absolute !important;
-  margin: -1px !important;
-  -webkit-clip-path: inset(50%) !important;
   clip-path: inset(50%) !important;
+  position: absolute !important;
+  clip-path: inset(50%) !important;
+  margin: -1px !important;
   border: 0 !important;
   padding: 0 !important;
   width: 1px !important;
@@ -158,9 +158,10 @@ html {
 body {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  background: #ff7a7a url("../images/bg-intro-mobile.png") no-repeat center center/cover;
+  align-items: center;
+  background: rgb(255, 122, 122) url("../images/bg-intro-mobile.png") no-repeat
+    center center/cover;
   padding: 5.5rem 1.5rem;
 }
 @media screen and (min-width: 59.375em) {
@@ -171,10 +172,10 @@ body {
 
 main,
 footer {
-  line-height: 1.6;
-  color: white;
-  font-family: "Poppins", sans-serif;
+  color: rgb(255, 255, 255);
   font-weight: 500;
+  line-height: 1.6;
+  font-family: Poppins, sans-serif;
 }
 
 p {
@@ -189,10 +190,10 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
-  text-align: center;
+  font-weight: 400;
   line-height: 1.6;
   font-family: sans-serif;
-  font-weight: 400;
+  text-align: center;
 }
 
 /** 
@@ -218,8 +219,8 @@ video[autoplay]:not([muted]) {
  *
  * Source: https://github.com/AllThingsSmitty/css-protips#set-font-size-on-form-elements-for-a-better-mobile-experience
  */
-input[type=text],
-input[type=number],
+input[type="text"],
+input[type="number"],
 select,
 textarea {
   font-size: 1rem;
@@ -262,16 +263,17 @@ svg path {
   position: fixed;
   top: 0;
   left: 0;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   z-index: 99;
-  background: #3a2046 url("../svg/exclamation-triangle.svg") no-repeat center center/20rem;
+  background: rgb(58, 32, 70) url("../svg/exclamation-triangle.svg") no-repeat
+    center center/20rem;
   padding: 0.625rem;
   width: 100%;
   min-height: 100vh;
-  text-align: center;
-  color: white;
+  color: rgb(255, 255, 255);
   font: 700 2.4rem/1.2 sans-serif;
+  text-align: center;
 }
 
 @media screen and (min-width: 59.375em) {
@@ -290,19 +292,19 @@ svg path {
   }
 }
 .card {
-  border-radius: 0.625rem;
   box-shadow: 0 0.5rem 0 rgba(0, 0, 0, 0.14);
+  border-radius: 0.625rem;
   padding: 1.5rem;
 }
 
 .card--white {
-  background-color: white;
-  color: #3e3c49;
+  background-color: rgb(255, 255, 255);
+  color: rgb(62, 60, 73);
 }
 
 .card--blue {
-  background-color: #6055a5;
-  color: white;
+  background-color: rgb(96, 85, 165);
+  color: rgb(255, 255, 255);
 }
 
 .hero {
@@ -341,15 +343,15 @@ svg path {
 
 .hero__title {
   margin-bottom: 1rem;
-  line-height: 1.3;
   font-size: 1.75rem;
+  line-height: 1.3;
 }
 @media screen and (min-width: 59.375em) {
   .hero__title {
     margin-bottom: 1.5rem;
+    font-size: 3.125rem;
     line-height: 1.1;
     letter-spacing: -0.03125rem;
-    font-size: 3.125rem;
   }
 }
 
@@ -363,8 +365,8 @@ svg path {
   margin-bottom: 1.5rem;
   border-radius: 0.625rem;
   padding: 1.125rem 4.125rem;
-  text-align: center;
   font-weight: 700;
+  text-align: center;
 }
 @media screen and (max-width: 21.875em) {
   .hero__promotion {
@@ -377,8 +379,8 @@ svg path {
 }
 
 .hero__form {
-  font-size: 0.875rem;
   font-weight: 600;
+  font-size: 0.875rem;
 }
 @media screen and (min-width: 59.375em) {
   .hero__form {
@@ -394,15 +396,16 @@ svg path {
 
 .hero__input {
   display: block;
-  border: 0.0625rem solid #dedede;
+  border: 0.0625rem solid rgb(222, 222, 222);
   border-radius: 0.3125rem;
   padding: 0.9375rem 3.4375rem 0.9375rem 1.25rem;
   width: 100%;
   height: 3.5rem;
   letter-spacing: 0.015625rem;
 }
-.hero__input:focus-visible, .hero__input:focus {
-  outline: 0.1875rem dotted #3e3c49;
+.hero__input:focus-visible,
+.hero__input:focus {
+  outline: 0.1875rem dotted rgb(62, 60, 73);
   outline-offset: 0.3125rem;
 }
 
@@ -411,12 +414,13 @@ svg path {
 }
 
 .hero__input.is-invalid {
-  border: 0.125rem solid #ff7a7a;
+  border: 0.125rem solid rgb(255, 122, 122);
   background: url("../svg/icon-error.svg") no-repeat center right 1.6875rem;
-  color: #ff7a7a;
+  color: rgb(255, 122, 122);
 }
-.hero__input.is-invalid:focus-visible, .hero__input.is-invalid:focus {
-  outline: 0.1875rem dotted #ff7a7a;
+.hero__input.is-invalid:focus-visible,
+.hero__input.is-invalid:focus {
+  outline: 0.1875rem dotted rgb(255, 122, 122);
   outline-offset: 0.3125rem;
 }
 
@@ -425,7 +429,7 @@ svg path {
 }
 
 .hero__input.is-invalid ~ .hero__label {
-  color: #ff7a7a;
+  color: rgb(255, 122, 122);
 }
 
 .hero__label {
@@ -447,17 +451,17 @@ svg path {
 
 .hero__checkbox:focus + .hero__label--show-password,
 .hero__checkbox:focus-visible + .hero__label--show-password {
-  outline: 0.1875rem dotted #3e3c49;
+  outline: 0.1875rem dotted rgb(62, 60, 73);
   outline-offset: 0.3125rem;
 }
 
 .hero__alert {
   margin-top: 0.375rem;
-  text-align: right;
-  color: #ff7a7a;
-  font-size: 0.6875rem;
-  font-weight: 500;
+  color: rgb(255, 122, 122);
   font-style: italic;
+  font-weight: 500;
+  font-size: 0.6875rem;
+  text-align: right;
 }
 
 .hero__info {
@@ -471,23 +475,25 @@ svg path {
 
 .hero__submit-button {
   display: block;
+  cursor: pointer;
+  box-shadow: inset 0 -0.25rem 0 rgba(0, 0, 0, 0.09);
   border: none;
   border-radius: 0.3125rem;
-  box-shadow: inset 0 -0.25rem 0 rgba(0, 0, 0, 0.09);
-  background-color: #38cc8c;
-  cursor: pointer;
+  background-color: rgb(56, 204, 140);
   padding: 0.9375rem;
   width: 100%;
-  text-transform: uppercase;
-  color: white;
+  color: rgb(255, 255, 255);
   font-size: 0.9375rem;
+  text-transform: uppercase;
 }
-.hero__submit-button:focus-visible, .hero__submit-button:focus {
-  outline: 0.1875rem dotted #3e3c49;
+.hero__submit-button:focus-visible,
+.hero__submit-button:focus {
+  outline: 0.1875rem dotted rgb(62, 60, 73);
   outline-offset: 0.3125rem;
 }
-.hero__submit-button:hover, .hero__submit-button:active {
-  background-color: #77e2b3;
+.hero__submit-button:hover,
+.hero__submit-button:active {
+  background-color: rgb(119, 226, 179);
 }
 @media screen and (prefers-reduced-motion: no-preference) {
   .hero__submit-button {
@@ -497,22 +503,24 @@ svg path {
 
 .hero__message {
   margin-top: 0.5rem;
-  text-align: center;
-  line-height: 1.9;
-  color: #b9b6d3;
+  color: rgb(185, 182, 211);
   font-size: 0.6875rem;
+  line-height: 1.9;
+  text-align: center;
 }
 
 .hero__link {
-  text-decoration: none;
-  color: #ff7a7a;
+  color: rgb(255, 122, 122);
   font-weight: 700;
+  text-decoration: none;
 }
-.hero__link:focus-visible, .hero__link:focus {
-  outline: 0.1875rem dotted #3e3c49;
+.hero__link:focus-visible,
+.hero__link:focus {
+  outline: 0.1875rem dotted rgb(62, 60, 73);
   outline-offset: 0.3125rem;
 }
-.hero__link:hover, .hero__link:active {
+.hero__link:hover,
+.hero__link:active {
   color: #ffa2a2;
 }
 @media screen and (prefers-reduced-motion: no-preference) {
@@ -524,9 +532,9 @@ svg path {
 .footer {
   margin-top: 6.25rem;
   width: 100%;
-  text-align: center;
-  font-size: 0.875rem;
   font-weight: 600;
+  font-size: 0.875rem;
+  text-align: center;
 }
 @media screen and (min-width: 59.375em) {
   .footer {
@@ -535,15 +543,17 @@ svg path {
 }
 
 .footer__link {
-  text-decoration: none;
-  color: #ff7a7a;
+  color: rgb(255, 122, 122);
   font-weight: 700;
+  text-decoration: none;
 }
-.footer__link:focus-visible, .footer__link:focus {
-  outline: 0.1875rem dotted #3e3c49;
+.footer__link:focus-visible,
+.footer__link:focus {
+  outline: 0.1875rem dotted rgb(62, 60, 73);
   outline-offset: 0.3125rem;
 }
-.footer__link:hover, .footer__link:active {
+.footer__link:hover,
+.footer__link:active {
   color: #ffa2a2;
 }
 @media screen and (prefers-reduced-motion: no-preference) {

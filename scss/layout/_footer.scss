@@ -3,9 +3,9 @@
 .footer {
   margin-top: rem(100);
   width: 100%;
-  text-align: center;
-  font-size: rem(14);
   font-weight: 600;
+  font-size: rem(14);
+  text-align: center;
 
   @include breakpoint-up("tiny") {
     width: auto;
@@ -13,9 +13,9 @@
 }
 
 .footer__link {
-  text-decoration: none;
   color: $red;
   font-weight: 700;
+  text-decoration: none;
 
   @include focus-visible($dark-blue);
 

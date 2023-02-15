@@ -1,4 +1,5 @@
 @use "../abstracts" as *;
+
 $-input-border-radius: rem(5);
 $-hero-gap: rem(45);
 
@@ -34,14 +35,14 @@ $-hero-gap: rem(45);
 
 .hero__title {
   margin-bottom: rem(16);
-  line-height: 1.3;
   font-size: rem(28);
+  line-height: 1.3;
 
   @include breakpoint-up("tiny") {
     margin-bottom: rem(24);
+    font-size: rem(50);
     line-height: 1.1;
     letter-spacing: rem(-0.5);
-    font-size: rem(50);
   }
 }
 
@@ -55,8 +56,8 @@ $-hero-gap: rem(45);
   margin-bottom: rem(24);
   border-radius: rem(10);
   padding: rem(18) rem(66);
-  text-align: center;
   font-weight: 700;
+  text-align: center;
 
   @media screen and (max-width: 21.875em) {
     padding: rem(18) rem(36);
@@ -68,8 +69,8 @@ $-hero-gap: rem(45);
 }
 
 .hero__form {
-  font-size: rem(14);
   font-weight: 600;
+  font-size: rem(14);
 
   @include breakpoint-up("tiny") {
     padding: rem(40);
@@ -84,7 +85,7 @@ $-hero-gap: rem(45);
 
 .hero__input {
   display: block;
-  border: rem(1) solid rgb(222, 222, 222);
+  border: rem(1) solid rgb(222 222 222);
   border-radius: $-input-border-radius;
   padding: rem(15) rem(55) rem(15) rem(20);
   width: 100%;
@@ -100,8 +101,7 @@ $-hero-gap: rem(45);
 
 .hero__input.is-invalid {
   border: rem(2) solid $red;
-  background: url("../svg/icon-error.svg") no-repeat center right
-    rem(27);
+  background: url("../svg/icon-error.svg") no-repeat center right rem(27);
   color: $red;
 
   @include focus-visible($red);
@@ -140,11 +140,11 @@ $-hero-gap: rem(45);
 
 .hero__alert {
   margin-top: rem(6);
-  text-align: right;
   color: $red;
-  font-size: rem(11);
-  font-weight: 500;
   font-style: italic;
+  font-weight: 500;
+  font-size: rem(11);
+  text-align: right;
 }
 
 .hero__info {
@@ -158,21 +158,21 @@ $-hero-gap: rem(45);
 
 .hero__submit-button {
   display: block;
+  cursor: pointer;
+  box-shadow: inset 0 rem(-4) 0 rgb(0 0 0 / 9%);
   border: none;
   border-radius: $-input-border-radius;
-  box-shadow: inset 0 rem(-4) 0 rgba(0, 0, 0, 0.09);
   background-color: $green;
-  cursor: pointer;
   padding: rem(15);
   width: 100%;
-  text-transform: uppercase;
   color: $white;
   font-size: rem(15);
+  text-transform: uppercase;
 
   @include focus-visible($dark-blue);
 
   @include on-event {
-    background-color: rgb(119, 226, 179);
+    background-color: rgb(119 226 179);
   }
 
   @media screen and (prefers-reduced-motion: no-preference) {
@@ -182,16 +182,16 @@ $-hero-gap: rem(45);
 
 .hero__message {
   margin-top: rem(8);
-  text-align: center;
-  line-height: 1.9;
   color: $grayish-blue;
   font-size: rem(11);
+  line-height: 1.9;
+  text-align: center;
 }
 
 .hero__link {
-  text-decoration: none;
   color: $red;
   font-weight: 700;
+  text-decoration: none;
 
   @include focus-visible($dark-blue);
 

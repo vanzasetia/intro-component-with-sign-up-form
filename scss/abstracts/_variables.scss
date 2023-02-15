@@ -1,13 +1,13 @@
 // Default black and white color for set-color() function (_functions.scss)
-$black: rgb(17, 17, 17) !default;
+$black: rgb(17 17 17) !default;
 
 // Colors
-$red: rgb(255, 122, 122);
-$green: rgb(56, 204, 140);
-$blue: rgb(96, 85, 165);
-$dark-blue: rgb(62, 60, 73);
-$grayish-blue: rgb(185, 182, 211);
-$white: rgb(255, 255, 255);
+$red: rgb(255 122 122);
+$green: rgb(56 204 140);
+$blue: rgb(96 85 165);
+$dark-blue: rgb(62 60 73);
+$grayish-blue: rgb(185 182 211);
+$white: rgb(255 255 255);
 
 // Breakpoints
 // Note: If the user font-size setting is 16px, then this 'em' is equal to this in 'px'
