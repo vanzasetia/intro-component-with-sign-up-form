@@ -2,23 +2,58 @@
   "name": "my-project",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
-    "devserver": "browser-sync start --server  --watch --port='8080' --no-inject-changes",
+    "devserver": "browser-sync start --server  --watch --port=\"8080\" --no-inject-changes",
     "watch:sass": "sass scss/main.scss css/style.css --watch --no-source-map",
     "start": "npm-run-all --parallel devserver watch:sass",
-
-    "prettier": "npx prettier --write .",
-    "semistandard:js": "semistandard --fix js/app.js",
-    "comb:stylesheets": "csscomb css/ scss/ -v",
-    "format": "npm-run-all comb:stylesheets semistandard:js prettier",
-
+    "validate:html": "html-validate ./*.html",
+    "prettier": "prettier --write .",
+    "sort:scss": "postcss ./scss/ --replace --config package.json",
+    "lint:scss": "stylelint \"**/*.scss\" --config ./.stylelintrc.json --fix",
+    "lint:js": "eslint -c ./.eslintrc.json ./js/app.js",
+    "lint:english": "write-good README.md docs/README.md",
+    "lint:markdown": "markdownlint-cli2-config \".markdownlint.jsonc\" \"**/*.md\" \"#node_modules\"",
+    "lint": "npm-run-all validate:html sort:scss lint:scss lint:js prettier lint:markdown",
     "compile:sass": "sass scss/main.scss css/style.css --no-source-map",
-    "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' css/style.css --output css/style.css",
-    "compressed:css": "sass scss/main.scss css/style.min.css --style=compressed --no-source-map",
-    "ready": "npm-run-all compile:sass comb:stylesheets semistandard:js prefix:css prettier compressed:css"
+    "build:css": "postcss ./css/style.css -o ./css/style.min.css --use autoprefixer cssnano --no-map",
+    "build:js": "terser ./js/app.js --output ./js/app.min.js --compress --mangle",
+    "purify:css": "purifycss ./css/style.min.css ./index.html ./js/app.js --min --out ./css/style.min.css --info",
+    "ready": "npm-run-all validate:html sort:scss lint:scss compile:sass build:css purify:css lint:js prettier build:js lint:markdown"
   },
-  "keywords": [],
-  "author": "Vanza Setia",
-  "license": "MIT"
+  "postcss": {
+    "syntax": "postcss-scss",
+    "map": false,
+    "plugins": {
+      "css-declaration-sorter": {
+        "order": "concentric-css"
+      }
+    }
+  },
+  "browserslist": [
+    "defaults"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "autoprefixer": "^10.4.13",
+    "browser-sync": "^2.27.11",
+    "css-declaration-sorter": "^6.3.1",
+    "cssnano": "^5.1.14",
+    "eslint": "^8.32.0",
+    "eslint-config-prettier": "^8.6.0",
+    "html-validate": "^7.13.1",
+    "markdownlint-cli2": "^0.6.0",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.4.21",
+    "postcss-cli": "^10.1.0",
+    "postcss-scss": "^4.0.6",
+    "prettier": "^2.8.3",
+    "purify-css": "^1.2.5",
+    "sass": "^1.57.1",
+    "stylelint": "^14.16.1",
+    "stylelint-config-prettier-scss": "^0.0.1",
+    "stylelint-config-standard-scss": "^6.1.0",
+    "terser": "^5.16.1",
+    "write-good": "^1.0.8"
+  }
 }
