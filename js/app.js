@@ -148,7 +148,12 @@
     passwordLength.textContent = passwordInput.value.length;
   };
 
+  const turnOffNativeFormValidation = () => {
+    form.setAttribute("novalidate", "");
+  };
+
   form.addEventListener("submit", validateUserInputs);
   showPasswordButton.addEventListener("click", togglePasswordVisibility);
   passwordInput.addEventListener("input", countPasswordLength);
+  document.addEventListener("DOMContentLoaded", turnOffNativeFormValidation);
 })();

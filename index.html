@@ -76,7 +76,6 @@
         <form
           class="hero__form card card--white js-form"
           name="sign-up"
-          novalidate
           method="POST"
           data-netlify="true"
         >
@@ -84,6 +83,7 @@
             <input
               type="text"
               name="first-name"
+              required
               placeholder=" "
               id="heroFirstNameInput"
               class="hero__input js-input"
@@ -108,6 +108,7 @@
             <input
               type="text"
               name="last-name"
+              required
               placeholder=" "
               id="heroLastNameInput"
               class="hero__input js-input"
@@ -130,6 +131,7 @@
             <input
               type="email"
               name="email"
+              required
               placeholder=" "
               id="heroEmailInput"
               class="hero__input js-input"
@@ -152,6 +154,7 @@
             <input
               type="password"
               name="password"
+              required
               placeholder=" "
               id="heroPasswordInput"
               class="hero__input hero__input--password js-input js-passwordInput"
