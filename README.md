@@ -8,6 +8,12 @@ I created this project to sharpen my coding skill.
 
 In this file, I'm going to tell you everything starting from the tools that I used, and much more.
 
+## Disclaimer
+
+This project is solely for learning purposes. I take no any responsibility or liability for the accuracy, completeness, or usefulness of any information provided in this project. You should not use it as a reference for creating your project.
+
+I am currently no longer working on this project.
+
 ## The challenge
 
 My challenge is to build out this landing page and get it looking as close to the design as possible.
@@ -48,6 +54,7 @@ I learned a lot of things when I was building this project.
 ### User story
 
 The [definition of the "User story" from wikipedia](https://en.wikipedia.org/wiki/User_story) is the following:
+
 > [...] **user story** is [...] natural language description of features of a software system.
 
 In other words, it is the way for a developer to **explain a feature from a user’s point of view**. Usually, a user story is written from the user’s perspective and follows the format: “As [a user persona], I want [to perform this action] so that [I can accomplish this goal].”
@@ -246,13 +253,6 @@ const handleAlert = input => {
 > If you have any feedback feel free to write it on the solution page. 😉
 
 *By writing my code in this file, I might be against the principle which means that if I change my code on the source code, I need to remember to change the code right here.*
-
-## Author
-
-- [Frontend Mentor | Vanza Setia's profile](https://www.frontendmentor.io/profile/vanzasetia)
-- [Vanza Setia (@vanzasetia) / Twitter](https://twitter.com/vanzasetia)
-- [Vanza Setia - CodeNewbie Community 🌱](https://community.codenewbie.org/vanzasetia)
-- You can find me on other social media platform as well — [Social Media Profiles of Vanza Setia](https://vslinks.netlify.app/)
 
 ## Acknowledgements
 
